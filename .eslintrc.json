@@ -1,0 +1,58 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"extends": [
+		"plugin:react/recommended",
+		"airbnb",
+		"plugin:@typescript-eslint/recommended",
+		"prettier/@typescript-eslint",
+		"plugin:prettier/recommended"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 12,
+		"sourceType": "module"
+	},
+	"plugins": ["react", "@typescript-eslint", "react-hooks", "prettier"],
+	"rules": {
+		"no-use-before-define": "off",
+		// permite o uso do index na key do elemento ao renderizar dados de array
+		"react/no-array-index-key": "off",
+		"no-unused-expressions": "off",
+		"react/require-default-props": "off",
+		"react/jsx-props-no-spreading": "off",
+		"jsx-a11y/media-has-caption": "off",
+		"react/prop-types": [2, { "ignore": ["children"] }],
+		// alerta caso esqueça de colocar uma dependencia no array do useEffect e useCallback
+		"react-hooks/exhaustive-deps": "warn",
+		"react/jsx-one-expression-per-line": "off",
+		"react/jsx-indent-props": ["error", "tab"],
+		"react/jsx-indent": ["error", "tab"],
+		"prettier/prettier": "error",
+		"react-hooks/rules-of-hooks": "error",
+		"react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+		"@typescript-eslint/explicit-function-return-type": [
+			"error",
+			{ "allowExpressions": true }
+		],
+		"import/prefer-default-export": "off",
+		"import/extensions": [
+			"error",
+			"ignorePackages",
+			{
+				"ts": "never",
+				"tsx": "never"
+			}
+		]
+	},
+	"settings": {
+		"import/resolver": {
+			"typescript": {}
+		}
+	}
+}
