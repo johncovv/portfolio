@@ -1,17 +1,25 @@
 import styled from 'styled-components';
 
-export const Content = styled.div`
-	margin-top: 120px;
-`;
+export const Content = styled.div``;
 
 export const LogoTitle = styled.p`
 	font-family: 'JetBrainsMono Bold';
-	font-size: 80px;
+
+	font-size: 55px;
+
+	@media (min-width: 768px) {
+		font-size: 80px;
+	}
 `;
 
 export const JobTitle = styled.p`
 	font-family: 'JetBrainsMono Bold';
-	font-size: 55px;
+
+	font-size: 30px;
+
+	@media (min-width: 768px) {
+		font-size: 55px;
+	}
 `;
 
 export const Title = styled.p`

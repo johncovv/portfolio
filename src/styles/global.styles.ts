@@ -28,6 +28,7 @@ export default createGlobalStyle`
 		font-size: 16px;
 
 		/* center container */
+		padding: 50px 20px;
 		max-width: 1000px;
 		margin: 0 auto;
 	}

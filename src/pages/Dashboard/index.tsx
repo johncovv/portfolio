@@ -2,6 +2,8 @@ import React from 'react';
 
 import GithubButton from './components/GithubButton';
 import EmailButton from './components/EmailButton';
+import SocialMedias from './components/SocialMedias';
+import Skills from './components/Skills';
 
 import { Content, LogoTitle, JobTitle, Title, About } from './styles';
 
@@ -20,6 +22,12 @@ const Dashboard: React.FunctionComponent = () => (
 
 		<Title>Contato</Title>
 		<EmailButton>contato@johncovv.com</EmailButton>
+
+		<SocialMedias />
+
+		<Title style={{ marginTop: 120 }}>Skills</Title>
+
+		<Skills />
 	</Content>
 );
 
