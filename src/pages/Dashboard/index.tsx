@@ -4,14 +4,17 @@ import GithubButton from './components/GithubButton';
 import EmailButton from './components/EmailButton';
 import SocialMedias from './components/SocialMedias';
 import Skills from './components/Skills';
+import Projects from './components/Projects';
 
 import { Content, LogoTitle, JobTitle, Title, About } from './styles';
 
 const Dashboard: React.FunctionComponent = () => (
 	<Content>
-		<LogoTitle>Jonathas Oliveira</LogoTitle>
+		{/* intro */}
+		<LogoTitle>John Covv</LogoTitle>
 		<JobTitle>Desenvolvedor Web</JobTitle>
 
+		{/* about */}
 		<About>
 			Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
 			Velit officia consequat duis enim velit mollit. Exercitation veniam
@@ -20,14 +23,19 @@ const Dashboard: React.FunctionComponent = () => (
 
 		<GithubButton>Visualizar Github</GithubButton>
 
-		<Title>Contato</Title>
+		{/* contact */}
+		<Title style={{ marginTop: 25 }}>Contato</Title>
 		<EmailButton>contato@johncovv.com</EmailButton>
 
 		<SocialMedias />
 
+		{/* skills */}
 		<Title style={{ marginTop: 120 }}>Skills</Title>
-
 		<Skills />
+
+		{/* projects */}
+		<Title style={{ marginTop: 120 }}>Projetos</Title>
+		<Projects />
 	</Content>
 );
 

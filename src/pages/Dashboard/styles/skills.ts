@@ -7,6 +7,10 @@ export const Content = styled.div`
 	grid-template-columns: 100%;
 	gap: 25px;
 
+	@media (min-width: 768px) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
 	@media (min-width: 1024px) {
 		grid-template-columns: repeat(5, 1fr);
 	}
@@ -34,7 +38,7 @@ export const Skill = styled.div<SKillAttr>`
 	transition: background-color 200ms, transform 200ms;
 
 	&:hover {
-		transform: scale(1.05);
+		transform: translateY(10px);
 		background-color: ${(props) => props.color};
 		color: #000;
 

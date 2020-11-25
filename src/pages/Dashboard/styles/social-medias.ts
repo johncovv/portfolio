@@ -9,7 +9,7 @@ export const Content = styled.div`
 	flex-direction: row;
 	align-items: center;
 
-	margin-top: 25px;
+	margin-top: 15px;
 
 	svg {
 		transition: transform 200ms;

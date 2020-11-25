@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import { IoMdMail } from 'react-icons/io';
 
 export const Content = styled.a`
-	margin-top: 10px;
+	margin-top: 15px;
+	width: fit-content;
 
 	display: flex;
 	flex-flow: row;
