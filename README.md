@@ -1,5 +1,7 @@
 # Personal portfolio 2020
 
+🔗 [Open Portfolio](https://johncovv.com)
+
 The portfolio, although simple, is being made in ReactJs to be easy to implement new features such as demo of private projects.
 
 Technologies used:
