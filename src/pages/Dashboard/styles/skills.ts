@@ -1,10 +1,13 @@
 import styled from 'styled-components';
 
+import { shade } from 'polished';
+
 export const Content = styled.div`
 	margin-top: 25px;
 
 	display: grid;
 	grid-template-columns: 100%;
+	grid-template-rows: auto;
 	gap: 25px;
 
 	@media (min-width: 768px) {
@@ -21,29 +24,112 @@ interface SKillAttr {
 }
 
 export const Skill = styled.div<SKillAttr>`
-	border: 2px solid ${(props) => props.color};
+	background-color: #282929;
 	border-radius: 8px;
-	padding: 10px;
 	cursor: pointer;
 
-	/* center */
+	@media (min-width: 768px) {
+		height: 0;
+		padding-top: 100%;
+	}
+
+	&:first-child {
+		@media (min-width: 768px) {
+			grid-column-start: 1;
+			grid-column-end: 3;
+			grid-row-start: 1;
+			grid-row-end: 3;
+
+			& > div > p {
+				font-size: 18px;
+			}
+		}
+
+		@media (min-width: 1024px) {
+			& > div > p {
+				font-size: 16px;
+			}
+		}
+	}
+
+	position: relative;
+
+	transition: transform 100ms;
+
+	&:hover {
+		transform: scale(1.03);
+	}
+`;
+
+export const Container = styled.div`
+	@media (min-width: 768px) {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+	}
+
+	padding: 10px;
+
+	display: flex;
+	flex-flow: column nowrap;
+`;
+
+export const Title = styled.div`
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	margin-bottom: 10px;
+
+	svg {
+		margin-right: 10px;
+	}
+`;
+
+export const Description = styled.p`
+	color: #aaaaaa;
+	flex-grow: 1;
+	white-space: pre-wrap;
+
+	font-size: 16px;
+
+	@media (min-width: 1024px) {
+		font-size: 12px;
+	}
+`;
+
+interface ButtonAttr {
+	isFirst: boolean;
+}
+
+export const Button = styled.button<ButtonAttr>`
+	margin-top: 10px;
+	border: none;
+	color: #282929;
+	padding: 10px;
+	border-radius: 8px;
+	margin-left: auto;
+
+	font-family: 'JetBrainsMono Bold';
+	background-color: #ff8934;
+
+	display: ${(props) => (props.isFirst ? 'flex' : 'none')};
+	@media (max-width: 767px) {
+		display: flex !important;
+	}
+
+	align-items: center;
 
 	svg {
 		margin-right: 10px;
 	}
 
-	transition: background-color 200ms, transform 200ms;
+	transition: transform 100ms, background-color 200ms;
 
 	&:hover {
-		transform: translateY(10px);
-		background-color: ${(props) => props.color};
-		color: #000;
-
-		svg {
-			fill: #000;
-		}
+		transform: scale(1.05);
+		background-color: ${shade(0.2, '#ff8934')};
 	}
 `;

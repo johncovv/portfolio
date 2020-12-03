@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { shade } from 'polished';
+
 export const Content = styled.div`
 	margin-top: 25px;
 
@@ -18,52 +20,98 @@ export const Content = styled.div`
 
 export const Project = styled.div`
 	position: relative;
+
 	cursor: pointer;
-
+	background-color: #282929;
 	border-radius: 8px;
-	overflow: hidden;
+	padding: 10px;
 
-	padding-top: 65%;
-	height: 0;
+	&:first-child {
+		@media (min-width: 768px) {
+			grid-column-start: 1;
+			grid-column-end: 3;
+		}
 
-	transition: transform 200ms;
+		@media (min-width: 1024px) {
+			grid-column-start: 1;
+			grid-column-end: 4;
+		}
+	}
+
+	transition: transform 100ms;
 
 	&:hover {
-		transform: translateY(10px);
+		transform: scale(1.02);
 	}
-
-	&:before {
-		content: '';
-		z-index: 5;
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		background-image: linear-gradient(
-			-30deg,
-			rgba(0, 0, 0, 0.7),
-			rgba(0, 0, 0, 0)
-		);
-	}
-`;
-
-export const Thumbnail = styled.img`
-	filter: drop-shadow(5px 5px 8px rgba(0, 0, 0, 0.15));
-
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
 `;
 
 export const Title = styled.p`
-	z-index: 10;
-	position: absolute;
-	bottom: 15px;
-	right: 15px;
+	margin-bottom: 15px;
+`;
+
+export const Description = styled.p`
+	font-size: 14px;
+	color: #aaaaaa;
+
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 5; /* number of lines to show */
+	-webkit-box-orient: vertical;
+`;
+
+export const ButtonContainer = styled.div`
+	display: flex;
+	flex-flow: row nowrap;
+`;
+
+export const ButtonLink = styled.button`
+	font-family: 'JetBrainsMono Bold';
+	background-color: #ff8934;
+	margin-top: 15px;
+	border: none;
+	color: #282929;
+	border-radius: 8px;
+	margin-right: 15px;
+	padding: 10px;
+	font-size: 12px;
+
+	svg {
+		margin-right: 5px;
+	}
+
+	display: flex;
+	align-items: center;
+
+	transition: transform 100ms, background-color 200ms;
+
+	&:hover {
+		transform: scale(1.05);
+		background-color: ${shade(0.2, '#ff8934')};
+	}
+`;
+
+export const ButtonProject = styled.button`
+	font-family: 'JetBrainsMono Bold';
+	background-color: #ff8934;
+	margin-top: 15px;
+	border: none;
+	color: #282929;
+	border-radius: 8px;
+	padding: 10px;
+	font-size: 12px;
+
+	svg {
+		margin-right: 5px;
+	}
+
+	display: flex;
+	align-items: center;
+
+	transition: transform 100ms, background-color 200ms;
+
+	&:hover {
+		transform: scale(1.05);
+		background-color: ${shade(0.2, '#ff8934')};
+	}
 `;

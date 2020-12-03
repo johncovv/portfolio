@@ -1,31 +1,20 @@
 import styled from 'styled-components';
 
-export const Content = styled.div``;
-
-export const LogoTitle = styled.p`
-	font-family: 'JetBrainsMono Bold';
-
-	font-size: 55px;
-
-	@media (min-width: 768px) {
-		font-size: 80px;
-	}
+export const Content = styled.div`
+	position: relative;
 `;
 
-export const JobTitle = styled.p`
-	font-family: 'JetBrainsMono Bold';
+export const LogoTitle = styled.div`
+	& > p {
+		font-size: 18px;
+	}
 
-	font-size: 30px;
-
-	@media (min-width: 768px) {
+	& > p.primary {
 		font-size: 55px;
+		font-family: 'JetBrainsMono Bold';
 	}
-`;
 
-export const Title = styled.p`
-	font-family: 'JetBrainsMono Bold';
-	margin-top: 25px;
-	font-size: 22px;
+	margin-bottom: 50px;
 `;
 
 export const About = styled.p`
@@ -33,5 +22,19 @@ export const About = styled.p`
 	font-size: 18px;
 
 	color: #aaaaaa;
+	margin-bottom: 30px;
+
+	span {
+		color: #ffffff;
+	}
+
+	span.primary {
+		color: #ff8934;
+	}
+`;
+
+export const Title = styled.p`
+	font-family: 'JetBrainsMono Bold';
 	margin-top: 25px;
+	font-size: 22px;
 `;

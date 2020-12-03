@@ -6,19 +6,24 @@ import SocialMedias from './components/SocialMedias';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 
-import { Content, LogoTitle, JobTitle, Title, About } from './styles';
+import { Content, LogoTitle, Title, About } from './styles';
 
 const Dashboard: React.FunctionComponent = () => (
 	<Content>
 		{/* intro */}
-		<LogoTitle>John Covv</LogoTitle>
-		<JobTitle>Desenvolvedor Web</JobTitle>
+		<LogoTitle>
+			<p>Olá, me chamo</p>
+			<p className="primary">John Covv</p>
+			<p>um Desenvolvedor web, profissional em front-end. Guariba-SP.</p>
+		</LogoTitle>
 
 		{/* about */}
 		<About>
-			Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-			Velit officia consequat duis enim velit mollit. Exercitation veniam
-			consequat sunt nostrud amet.
+			Trabalho na área de Desenvolvimento Web desde 2018, neste tempo passei por
+			várias tecnologias, como <span>PHP</span>, <span>Vue</span> até que me
+			encontrei na stack <span className="primary">Full Javascript</span>, com
+			desenvolvimento utilizando tecnologias <span>Javascript</span> como{' '}
+			<span>NodeJs</span>, <span>React</span> e <span>React Native</span>.
 		</About>
 
 		<GithubButton>Visualizar Github</GithubButton>

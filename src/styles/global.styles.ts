@@ -23,7 +23,7 @@ export default createGlobalStyle`
 	}
 
 	body {
-		background-color: #232323;
+		background-color: #171717;
 		color: #ffffff;
 		font-size: 16px;
 
