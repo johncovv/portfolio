@@ -11,7 +11,7 @@ export const Content = styled.a`
 	align-items: center;
 
 	transition: transform 200ms;
-	color: #fff;
+	color: ${({ theme }) => theme.text.primary};
 
 	&:hover {
 		transform: translateX(10px);
@@ -22,11 +22,11 @@ export const Text = styled.p`
 	font-family: 'JetBrainsMono Bold';
 	margin-left: 10px;
 	font-size: 18px;
-	color: #fff;
+	color: ${({ theme }) => theme.text.primary};
 `;
 
 export const Icon = styled(IoMdMail)`
 	height: 25px;
 	width: 25px;
-	fill: #fff;
+	fill: ${({ theme }) => theme.text.primary};
 `;

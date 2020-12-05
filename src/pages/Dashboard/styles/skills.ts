@@ -24,7 +24,7 @@ interface SKillAttr {
 }
 
 export const Skill = styled.div<SKillAttr>`
-	background-color: #282929;
+	background-color: ${({ theme }) => theme.background.secondary};
 	border-radius: 8px;
 
 	@media (min-width: 768px) {
@@ -94,7 +94,7 @@ export const Title = styled.div`
 `;
 
 export const Description = styled.p`
-	color: #aaaaaa;
+	color: ${({ theme }) => theme.text.secondary};
 	flex-grow: 1;
 	white-space: pre-wrap;
 
@@ -112,13 +112,13 @@ interface ButtonAttr {
 export const Button = styled.button<ButtonAttr>`
 	margin-top: 10px;
 	border: none;
-	color: #282929;
+	color: ${({ theme }) => theme.colors.dark};
 	padding: 10px;
 	border-radius: 8px;
 	margin-left: auto;
 
 	font-family: 'JetBrainsMono Bold';
-	background-color: #ff8934;
+	background-color: ${({ theme }) => theme.colors.orange};
 
 	display: ${(props) => (props.isFirst ? 'flex' : 'none')};
 	@media (max-width: 767px) {
@@ -135,6 +135,6 @@ export const Button = styled.button<ButtonAttr>`
 
 	&:hover {
 		transform: scale(1.05);
-		background-color: ${shade(0.2, '#ff8934')};
+		background-color: ${({ theme }) => shade(0.2, theme.colors.orange)};
 	}
 `;

@@ -27,8 +27,8 @@ export default createGlobalStyle`
 	}
 
 	body {
-		background-color: #171717;
-		color: #ffffff;
+		background-color: ${({ theme }) => theme.background.primary};
+		color: ${({ theme }) => theme.text.primary};
 		font-size: 16px;
 
 		/* center container */

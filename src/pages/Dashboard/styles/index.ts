@@ -25,7 +25,7 @@ export const LogoTitle = styled.div`
 
 		& > span {
 			font-size: 18px;
-			color: #ff8934;
+			color: ${({ theme }) => theme.colors.orange};
 			margin-left: 10px;
 		}
 	}
@@ -37,15 +37,15 @@ export const About = styled.p`
 	font-family: 'JetBrainsMono Bold';
 	font-size: 18px;
 
-	color: #aaaaaa;
+	color: ${({ theme }) => theme.text.secondary};
 	margin-bottom: 30px;
 
 	span {
-		color: #ffffff;
+		color: ${({ theme }) => theme.text.primary};
 	}
 
 	span.primary {
-		color: #ff8934;
+		color: ${({ theme }) => theme.colors.orange};
 	}
 `;
 

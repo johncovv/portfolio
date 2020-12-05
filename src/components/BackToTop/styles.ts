@@ -9,14 +9,14 @@ export const Content = styled.div`
 
 	padding: 15px 10px 10px 15px;
 	border-top-left-radius: 50px;
-	background-color: #282929;
+	background-color: ${({ theme }) => theme.background.secondary};
 
-	box-shadow: 0 0 rgba(0, 0, 0, 0), -5px -5px 10px rgba(0, 0, 0, 0.2);
+	box-shadow: ${({ theme }) => theme.shadow.default};
 
 	transition: background-color 200ms;
 	cursor: pointer;
 
 	&:hover {
-		background-color: ${shade(0.2, '#282929')};
+		background-color: ${({ theme }) => shade(0.2, theme.background.secondary)};
 	}
 `;

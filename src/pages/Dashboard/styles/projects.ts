@@ -21,7 +21,7 @@ export const Content = styled.div`
 export const Project = styled.div`
 	position: relative;
 
-	background-color: #282929;
+	background-color: ${({ theme }) => theme.background.secondary};
 	border-radius: 8px;
 	padding: 10px;
 
@@ -40,11 +40,12 @@ export const Project = styled.div`
 
 export const Title = styled.p`
 	margin-bottom: 15px;
+	font-family: 'JetBrainsMono Bold';
 `;
 
 export const Description = styled.p`
 	font-size: 14px;
-	color: #aaaaaa;
+	color: ${({ theme }) => theme.text.secondary};
 
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -60,10 +61,10 @@ export const ButtonContainer = styled.div`
 
 export const ButtonLink = styled.button`
 	font-family: 'JetBrainsMono Bold';
-	background-color: #ff8934;
+	background-color: ${({ theme }) => theme.colors.orange};
 	margin-top: 15px;
 	border: none;
-	color: #282929;
+	color: ${({ theme }) => theme.colors.dark};
 	border-radius: 8px;
 	margin-right: 15px;
 	padding: 10px;
@@ -80,16 +81,16 @@ export const ButtonLink = styled.button`
 
 	&:hover {
 		transform: scale(1.05);
-		background-color: ${shade(0.2, '#ff8934')};
+		background-color: ${({ theme }) => shade(0.2, theme.colors.orange)};
 	}
 `;
 
 export const ButtonProject = styled.button`
 	font-family: 'JetBrainsMono Bold';
-	background-color: #ff8934;
+	background-color: ${({ theme }) => theme.colors.orange};
 	margin-top: 15px;
 	border: none;
-	color: #282929;
+	color: ${({ theme }) => theme.colors.dark};
 	border-radius: 8px;
 	padding: 10px;
 	font-size: 12px;
@@ -105,6 +106,6 @@ export const ButtonProject = styled.button`
 
 	&:hover {
 		transform: scale(1.05);
-		background-color: ${shade(0.2, '#ff8934')};
+		background-color: ${({ theme }) => shade(0.2, theme.colors.orange)};
 	}
 `;
