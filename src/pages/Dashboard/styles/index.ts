@@ -12,6 +12,22 @@ export const LogoTitle = styled.div`
 	& > p.primary {
 		font-size: 55px;
 		font-family: 'JetBrainsMono Bold';
+
+		@media (max-width: 767px) {
+			display: flex;
+			flex-flow: column nowrap;
+
+			& > span {
+				margin-left: 0 !important;
+				margin-bottom: 10px;
+			}
+		}
+
+		& > span {
+			font-size: 18px;
+			color: #ff8934;
+			margin-left: 10px;
+		}
 	}
 
 	margin-bottom: 50px;

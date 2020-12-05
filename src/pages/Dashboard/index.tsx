@@ -13,8 +13,10 @@ const Dashboard: React.FunctionComponent = () => (
 		{/* intro */}
 		<LogoTitle>
 			<p>Olá, me chamo</p>
-			<p className="primary">John Covv</p>
-			<p>um Desenvolvedor web, profissional em front-end. Guariba-SP.</p>
+			<p className="primary">
+				Jonathas Oliveira<span>(johncovv)</span>
+			</p>
+			<p>sou Desenvolvedor web, profissional em front-end. Guariba-SP.</p>
 		</LogoTitle>
 
 		{/* about */}
@@ -26,7 +28,7 @@ const Dashboard: React.FunctionComponent = () => (
 			<span>NodeJs</span>, <span>React</span> e <span>React Native</span>.
 		</About>
 
-		<GithubButton>Visualizar Github</GithubButton>
+		<GithubButton>Visite meu Github</GithubButton>
 
 		{/* contact */}
 		<Title style={{ marginTop: 25 }}>Contato</Title>

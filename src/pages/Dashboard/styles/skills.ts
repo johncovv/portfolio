@@ -26,7 +26,6 @@ interface SKillAttr {
 export const Skill = styled.div<SKillAttr>`
 	background-color: #282929;
 	border-radius: 8px;
-	cursor: pointer;
 
 	@media (min-width: 768px) {
 		height: 0;
@@ -56,8 +55,14 @@ export const Skill = styled.div<SKillAttr>`
 
 	transition: transform 100ms;
 
-	&:hover {
-		transform: scale(1.03);
+	@media (min-width: 768px) {
+		&:not(:first-child) {
+			cursor: pointer;
+
+			&:hover {
+				transform: scale(1.03);
+			}
+		}
 	}
 `;
 

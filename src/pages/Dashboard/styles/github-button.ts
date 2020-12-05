@@ -18,7 +18,7 @@ export const Content = styled.button`
 	transition: transform 200ms, background-color 200ms;
 
 	&:hover {
-		transform: translateX(10px);
+		transform: scale(1.03);
 		background-color: ${shade(0.2, '#ff8934')};
 	}
 `;

@@ -21,7 +21,6 @@ export const Content = styled.div`
 export const Project = styled.div`
 	position: relative;
 
-	cursor: pointer;
 	background-color: #282929;
 	border-radius: 8px;
 	padding: 10px;
@@ -36,12 +35,6 @@ export const Project = styled.div`
 			grid-column-start: 1;
 			grid-column-end: 4;
 		}
-	}
-
-	transition: transform 100ms;
-
-	&:hover {
-		transform: scale(1.02);
 	}
 `;
 

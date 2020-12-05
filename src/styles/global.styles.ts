@@ -43,9 +43,6 @@ export default createGlobalStyle`
 
 	button, a {
 		text-decoration: none;
-
-		&:hover {
-			cursor: pointer;
-		}
+		cursor: pointer;
 	}
 `;
