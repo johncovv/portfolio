@@ -22,13 +22,21 @@ export default createGlobalStyle`
 		margin: 0;
 	}
 
+	html {
+		scroll-behavior: smooth;
+	}
+
 	body {
 		background-color: #171717;
 		color: #ffffff;
 		font-size: 16px;
 
 		/* center container */
-		padding: 50px 20px;
+		padding: calc(100px + 75px) 20px 20px;
+		@media (min-width: 1024px) {
+			padding: calc(100px + 75px) 20px 50px;
+		}
+
 		max-width: 1000px;
 		margin: 0 auto;
 	}
