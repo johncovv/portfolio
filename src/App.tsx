@@ -1,9 +1,11 @@
 import React, { useCallback, useState } from 'react';
 
+import { BrowserRouter } from 'react-router-dom';
+
 import { ThemeProvider } from 'styled-components';
 
 // page
-import Dashboard from './pages/Dashboard';
+import Routes from './routes';
 
 // components
 import Header from './components/Header';
@@ -39,12 +41,16 @@ const App: React.FunctionComponent = () => {
 
 	return (
 		<ThemeProvider theme={currentTheme === 'dark' ? darkTheme : lightTheme}>
-			<Header
-				isDark={currentTheme === 'dark'}
-				toggleTheme={() => toggleTheme()}
-			/>
-			<Dashboard />
-			<BackToTop />
+			<BrowserRouter>
+				<Header
+					isDark={currentTheme === 'dark'}
+					toggleTheme={() => toggleTheme()}
+				/>
+
+				<Routes />
+
+				<BackToTop />
+			</BrowserRouter>
 			<GlobalStyles />
 		</ThemeProvider>
 	);

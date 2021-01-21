@@ -3,6 +3,7 @@ export default {
 		orange: '#FF8934',
 		white: '#ffffff',
 		dark: '#171717',
+		red: '#ff3434',
 	},
 	background: {
 		primary: '#171717',

@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import ReactMarkdown from 'react-markdown';
+
 import { shade } from 'polished';
 
 export const Content = styled.div`
@@ -25,6 +27,9 @@ export const Project = styled.div`
 	border-radius: 8px;
 	padding: 10px;
 
+	display: flex;
+	flex-flow: column nowrap;
+
 	&:first-child {
 		@media (min-width: 768px) {
 			grid-column-start: 1;
@@ -43,7 +48,7 @@ export const Title = styled.p`
 	font-family: 'JetBrainsMono Bold';
 `;
 
-export const Description = styled.p`
+export const Description = styled(ReactMarkdown)`
 	font-size: 14px;
 	color: ${({ theme }) => theme.text.secondary};
 
@@ -52,11 +57,14 @@ export const Description = styled.p`
 	display: -webkit-box;
 	-webkit-line-clamp: 5; /* number of lines to show */
 	-webkit-box-orient: vertical;
+
+	white-space: pre-line;
 `;
 
 export const ButtonContainer = styled.div`
 	display: flex;
 	flex-flow: row nowrap;
+	margin-top: auto;
 `;
 
 export const ButtonLink = styled.button`

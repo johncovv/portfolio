@@ -16,6 +16,11 @@ export default createGlobalStyle`
 		font-weight: 700;
 	}
 
+	::selection {
+		background-color: rgba(255, 137, 52, 0.31);
+		color: ${({ theme }) => theme.text.primary};
+	}
+
 	* {
 		box-sizing: border-box;
 		padding: 0;
@@ -45,8 +50,14 @@ export default createGlobalStyle`
 		font-family: 'JetBrainsMono Regular';
 	}
 
-	a:hover {
-		text-decoration: underline;
+	a {
+		color: ${({ theme }) => theme.text.primary};
+
+		&:hover {
+			text-decoration: underline;
+
+			color: ${({ theme }) => theme.colors.orange};
+		}
 	}
 
 	button, a {

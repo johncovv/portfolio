@@ -30,6 +30,7 @@ export const Logo = styled(LogoImg).attrs({ width: 49, height: 35 })`
 	fill: ${({ theme }) => theme.colors.orange};
 
 	transition: fill 200ms, transform 200ms;
+	cursor: pointer;
 
 	&:hover {
 		fill: ${({ theme }) => shade(0.2, theme.colors.orange)};
