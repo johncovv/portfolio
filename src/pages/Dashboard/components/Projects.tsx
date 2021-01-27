@@ -1,7 +1,10 @@
 import React from 'react';
 
+import { useHistory } from 'react-router-dom';
+
 import { BiLink } from 'react-icons/bi';
 import { IoLogoGithub } from 'react-icons/io';
+import { IoDocumentText } from 'react-icons/io5';
 
 import ProjectsData from '../../../assets/objects/projects';
 
@@ -16,20 +19,31 @@ import {
 } from '../styles/projects';
 
 const Projects: React.FunctionComponent = () => {
+	const { push } = useHistory();
+
 	return (
 		<Content>
-			{ProjectsData.map(({ name, url, github, description }) => (
+			{ProjectsData.map(({ name, url, detailsUrl, github, description }) => (
 				<Project key={name}>
 					<Title>{name}</Title>
 					<Description>{description}</Description>
 
 					<ButtonContainer>
-						<ButtonLink onClick={() => window.open(url, '_target')}>
-							<BiLink size={22} color="#282929" />
-							Visualizar
-						</ButtonLink>
+						{!detailsUrl && url && (
+							<ButtonLink onClick={() => window.open(url, '_target')}>
+								<BiLink size={22} color="#282929" />
+								Visualizar
+							</ButtonLink>
+						)}
 
-						{github.length > 0 && (
+						{detailsUrl && (
+							<ButtonLink onClick={() => push(detailsUrl)}>
+								<IoDocumentText size={22} color="#282929" />
+								Detalhes
+							</ButtonLink>
+						)}
+
+						{github && github.length > 0 && (
 							<ButtonProject onClick={() => window.open(github, '_target')}>
 								<IoLogoGithub size={22} color="#282929" />
 								Abrir Projeto

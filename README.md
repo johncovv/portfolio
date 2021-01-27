@@ -22,14 +22,12 @@ Technologies used:
 <br>
 <br>
 
-# Dark theme
+# Preview
 
-<div align="center" id="dark-theme">
-	<img src="./assets/preview-dark.png">
-</div>
-
-# Light theme
-
-<div align="center" id="light-theme">
-	<img src="./assets/preview-light.png">
-</div>
+Home Dark Theme             | Home Light theme
+:-------------------------:|:-------------------------:
+![](./assets/home-dark.png)  |  ![](./assets/home-light.png)
+Project Dark Theme  |  Project Light Theme
+![](./assets/project-dark.png)  |  ![](./assets/project-light.png)
+Project (image open) Dark Theme  |  Project (image open) Light Theme
+![](./assets/project-popup-dark.png)  |  ![](./assets/project-popup-light.png)

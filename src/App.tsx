@@ -1,20 +1,23 @@
 import React, { useCallback, useState } from 'react';
 
+import { BrowserRouter } from 'react-router-dom';
+
 import { ThemeProvider } from 'styled-components';
 
 // page
-import Dashboard from './pages/Dashboard';
+import Routes from './routes';
 
 // components
 import Header from './components/Header';
 import BackToTop from './components/BackToTop';
+import Footer from './components/Footer';
 
 // themes
 import lightTheme from './styles/themes/light';
 import darkTheme from './styles/themes/dark';
 
 // styles
-import GlobalStyles from './styles/global.styles';
+import GlobalStyles, { AppContainer } from './styles/global.styles';
 
 const App: React.FunctionComponent = () => {
 	const [currentTheme, setCurrentTheme] = useState<'dark' | 'light'>(() => {
@@ -39,12 +42,20 @@ const App: React.FunctionComponent = () => {
 
 	return (
 		<ThemeProvider theme={currentTheme === 'dark' ? darkTheme : lightTheme}>
-			<Header
-				isDark={currentTheme === 'dark'}
-				toggleTheme={() => toggleTheme()}
-			/>
-			<Dashboard />
-			<BackToTop />
+			<BrowserRouter>
+				<Header
+					isDark={currentTheme === 'dark'}
+					toggleTheme={() => toggleTheme()}
+				/>
+
+				<AppContainer>
+					<Routes />
+				</AppContainer>
+
+				<Footer />
+
+				<BackToTop />
+			</BrowserRouter>
 			<GlobalStyles />
 		</ThemeProvider>
 	);
