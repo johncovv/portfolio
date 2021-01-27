@@ -58,6 +58,10 @@ export const About = styled(ReactMarkdown)`
 	& strong {
 		color: ${({ theme }) => theme.text.primary};
 	}
+
+	& p:not(:last-child) {
+		margin-bottom: 15px;
+	}
 `;
 
 interface AlertProps {

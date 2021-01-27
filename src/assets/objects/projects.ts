@@ -24,10 +24,31 @@ export default [
 		detailsUrl: '/project/ExReality',
 		github: '',
 		description:
-			'O projecto **ExReality** foi criado para apresentação de uma peça de teatro online em meio a pandemia de 2020.\nO objetivo do projeto era apresentar a peça onde o público tivesse acesso 24h/s por dia a interações com os atores via Chat e Enquetes, tento impacto direto na apresentação.',
+			'O projecto **ExReality** foi criado para apresentação de uma peça de teatro online em meio a pandemia de 2020.\n\nO objetivo do projeto era apresentar a peça onde o público tivesse **acesso 24h/s por dia** a interações com os atores via Chat e Enquetes, tento impacto direto na apresentação.\n\nEste projeto também contou com a tecnologia **PWA** disponível no React, onde é possível **instalar o site como um aplicativo(desktop e mobile)**, também foi integrado o envio de **notificações** para o usuário, onde se notificava eventos na peça teatral.',
 		images: [
-			{ url: 'https://i.imgur.com/QjAbbvY.png' },
-			{ url: 'https://i.imgur.com/ai7RtMT.png' },
+			{ title: 'Tela de login', url: 'https://i.imgur.com/hjzitqQ.png' },
+			{
+				title: 'Tela "Esqueci minha senha"',
+				url: 'https://i.imgur.com/uj6ZRSj.png',
+			},
+			{ title: 'Tela pré cadastro', url: 'https://i.imgur.com/FDyP3yA.png' },
+			{ title: 'Tela de cadastro', url: 'https://i.imgur.com/9hm4QXd.png' },
+			{
+				title: 'Dashbord - pagina principal',
+				url: 'https://i.imgur.com/pw2h2rr.png',
+			},
+			{
+				title: 'Dashbord - pagina principal',
+				url: 'https://i.imgur.com/zG1nmGp.png',
+			},
+			{
+				title: 'Dashbord - pagina principal',
+				url: 'https://i.imgur.com/UVeMdlJ.png',
+			},
+			{
+				title: 'Tela de configurações do usuário',
+				url: 'https://i.imgur.com/7YkA9fY.png',
+			},
 		],
 		partners: [
 			{
@@ -38,6 +59,7 @@ export default [
 		],
 		technologies: [
 			{ name: 'React', url: 'https://pt-br.reactjs.org/' },
+			{ name: 'PWA (React)', url: 'https://github.com/topics/pwa' },
 			{
 				name: 'React Icons',
 				url: 'https://react-icons.github.io/react-icons/',
