@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 import JetBrainsMonoRegular from '../assets/fonts/JetBrainsMono-Regular.ttf';
 import JetBrainsMonoBold from '../assets/fonts/JetBrainsMono-Bold.ttf';
@@ -35,15 +35,6 @@ export default createGlobalStyle`
 		background-color: ${({ theme }) => theme.background.primary};
 		color: ${({ theme }) => theme.text.primary};
 		font-size: 16px;
-
-		/* center container */
-		padding: calc(100px + 75px) 20px 20px;
-		@media (min-width: 1024px) {
-			padding: calc(100px + 75px) 20px 50px;
-		}
-
-		max-width: 1000px;
-		margin: 0 auto;
 	}
 
 	body, button, a {
@@ -52,11 +43,10 @@ export default createGlobalStyle`
 
 	a {
 		color: ${({ theme }) => theme.text.primary};
+		width: fit-content;
 
 		&:hover {
 			text-decoration: underline;
-
-			color: ${({ theme }) => theme.colors.orange};
 		}
 	}
 
@@ -64,4 +54,15 @@ export default createGlobalStyle`
 		text-decoration: none;
 		cursor: pointer;
 	}
+`;
+
+export const AppContainer = styled.div`
+	/* center container */
+	padding: calc(50px + 75px) 20px 0;
+	@media (min-width: 1024px) {
+		padding: calc(50px + 75px) 20px 0;
+	}
+
+	max-width: 1000px;
+	margin: 0 auto;
 `;

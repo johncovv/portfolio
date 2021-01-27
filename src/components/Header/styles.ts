@@ -5,12 +5,14 @@ import { shade } from 'polished';
 import { ReactComponent as LogoImg } from '../../assets/static/logo.svg';
 
 export const Content = styled.header`
-	position: absolute;
+	position: sticky;
 	top: 0;
 	left: 0;
 	right: 0;
+	z-index: 1000;
 
 	background: ${({ theme }) => theme.background.secondary};
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 	height: 75px;
 `;
 

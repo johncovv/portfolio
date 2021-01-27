@@ -10,13 +10,14 @@ import Routes from './routes';
 // components
 import Header from './components/Header';
 import BackToTop from './components/BackToTop';
+import Footer from './components/Footer';
 
 // themes
 import lightTheme from './styles/themes/light';
 import darkTheme from './styles/themes/dark';
 
 // styles
-import GlobalStyles from './styles/global.styles';
+import GlobalStyles, { AppContainer } from './styles/global.styles';
 
 const App: React.FunctionComponent = () => {
 	const [currentTheme, setCurrentTheme] = useState<'dark' | 'light'>(() => {
@@ -47,7 +48,11 @@ const App: React.FunctionComponent = () => {
 					toggleTheme={() => toggleTheme()}
 				/>
 
-				<Routes />
+				<AppContainer>
+					<Routes />
+				</AppContainer>
+
+				<Footer />
 
 				<BackToTop />
 			</BrowserRouter>

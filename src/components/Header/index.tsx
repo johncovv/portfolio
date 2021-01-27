@@ -24,10 +24,15 @@ const Header: React.FunctionComponent<HeaderProps> = ({
 }: HeaderProps) => {
 	const { push } = useHistory();
 
+	const handleLogoClick = (): void => {
+		push('/');
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	};
+
 	return (
 		<Content>
 			<Container>
-				<Logo onClick={() => push('/')} />
+				<Logo onClick={handleLogoClick} />
 
 				<NavItems>
 					<Item href="/#skills">Skills</Item>

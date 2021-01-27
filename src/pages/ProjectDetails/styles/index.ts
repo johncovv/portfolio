@@ -10,9 +10,9 @@ export const Title = styled.h1`
 `;
 
 export const ButtonContainer = styled.div`
-	margin: 0 0 25px;
 	display: flex;
-	flex-flow: row nowrap;
+	flex-flow: row wrap;
+	margin-bottom: 25px;
 `;
 
 export const Button = styled.button`
@@ -23,26 +23,41 @@ export const Button = styled.button`
 	border-radius: 8px;
 	padding: 10px;
 	font-size: 12px;
-	margin-right: 15px;
-
-	svg {
-		margin-right: 5px;
-	}
-
 	display: flex;
 	align-items: center;
-
 	transition: transform 100ms, background-color 200ms;
+
+	&:not(:last-child) {
+		margin-right: 15px;
+	}
+
+	@media (max-width: 767px) {
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+
+		&:last-child {
+			margin-bottom: auto;
+		}
+	}
 
 	&:hover {
 		transform: scale(1.05);
 		background-color: ${({ theme }) => shade(0.2, theme.colors.orange)};
+	}
+
+	svg {
+		margin-right: 5px;
 	}
 `;
 
 export const About = styled(ReactMarkdown)`
 	white-space: pre-line;
 	color: ${({ theme }) => theme.text.secondary};
+
+	& strong {
+		color: ${({ theme }) => theme.text.primary};
+	}
 `;
 
 interface AlertProps {

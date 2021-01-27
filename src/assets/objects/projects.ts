@@ -24,12 +24,10 @@ export default [
 		detailsUrl: '/project/ExReality',
 		github: '',
 		description:
-			'O projecto **ExReality** foi criado para apresentação de uma peça de teatro em meio a pandemia de 2020.\nO objetivo do projeto era apresentar uma peça onde o público tinha acesso 24h/s por dia a interação com os atores via Chat e Enquetes, tento impacto direto na apresentação.',
+			'O projecto **ExReality** foi criado para apresentação de uma peça de teatro online em meio a pandemia de 2020.\nO objetivo do projeto era apresentar a peça onde o público tivesse acesso 24h/s por dia a interações com os atores via Chat e Enquetes, tento impacto direto na apresentação.',
 		images: [
 			{ url: 'https://i.imgur.com/QjAbbvY.png' },
 			{ url: 'https://i.imgur.com/ai7RtMT.png' },
-			{ url: 'https://i.imgur.com/0eaLJ8q.png' },
-			{ url: 'https://i.imgur.com/I7XfVVn.png' },
 		],
 		partners: [
 			{
@@ -61,7 +59,7 @@ export default [
 		detailsUrl: '/project/MpAuto',
 		github: '',
 		description:
-			'Site de apresentação para venda de veículos, neste foi usado tecnologias básicas como **Html**, **Css3** e **Javascript**.',
+			'Neste projeto o objetivo era montar uma plataforma para apresentação de veículos da concessionária **Mp Auto** estabelecida na cidade de **Cotia - SP**.\n\nA plataforma tem ferramentas avançadas como pesquisa com filtros, galeria de fotos com carrossel, criação dinâmica de panfleto com informações do veículo para download e etc.',
 		images: [
 			{ title: 'Pagina Home', url: 'https://i.imgur.com/n3i8Zop.png' },
 			{
@@ -111,7 +109,8 @@ export default [
 				'https://www.figma.com/file/tOYHJHpGJ9s4vBL6sqbRnG/Devian-Frontend?node-id=1%3A21',
 		},
 		github: 'https://github.com/johncovv/devian/',
-		description: `Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. sunt nostrud ame est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. sunt nostrud ametest sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. sunt nostrud amet est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.icia consequat duis enim velit`,
+		description:
+			'Este é um projeto **pessoal**, onde o objetivo inicial era aprender a desenvolver um bot para **Discord** rodando em **Nodejs**.\nApós terminar os comandos básicos, decidi criar também um correspondente web, onde os administradores de servidores(Discord) poderiam configurar o bot facilmente pela plataforma.',
 		images: [
 			{
 				title: 'Site completo com menus fechados',
