@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 
 import {
 	Content,
@@ -10,6 +10,8 @@ import {
 	PopupImageContainer,
 	PopupTitle,
 	PopupImage,
+	PopupArrayPrevious,
+	PopupArrayNext,
 } from '../styles/gallery';
 
 interface GalleryProps {
@@ -26,13 +28,47 @@ const ProjectGallery: React.FunctionComponent<GalleryProps> = ({
 
 	const closePopup = (): void => setActiveImagePopup(null);
 
+	const handleNext = useCallback(
+		(event: React.MouseEvent, url?: string) => {
+			event.stopPropagation();
+
+			const selectedIndex = images.findIndex((img) => img.url === url);
+
+			const next = images[selectedIndex + 1];
+
+			if (next) setActiveImagePopup(next);
+		},
+		[images],
+	);
+
+	const handlePrevious = useCallback(
+		(event: React.MouseEvent, url?: string) => {
+			event.stopPropagation();
+
+			const selectedIndex = images.findIndex((img) => img.url === url);
+
+			const next = images[selectedIndex - 1];
+
+			if (next) setActiveImagePopup(next);
+		},
+		[images],
+	);
+
+	const hasNextImage = !!images[
+		images.findIndex((img) => img.url === activeImagePopup?.url) - 1
+	];
+
+	const hasPreviousImage = !!images[
+		images.findIndex((img) => img.url === activeImagePopup?.url) + 1
+	];
+
 	return (
 		<>
 			<Content>
 				{images.map((image, index) => (
 					<ImageItem key={`${image}-${index}`}>
 						<ImageItemContainer onClick={() => setActiveImagePopup(image)}>
-							<Source src={image.url} alt="johncovv project image" />
+							<Source src={image.url} alt="johncovv project" />
 						</ImageItemContainer>
 					</ImageItem>
 				))}
@@ -40,18 +76,24 @@ const ProjectGallery: React.FunctionComponent<GalleryProps> = ({
 
 			<PopupContent active={!!activeImagePopup} onClick={closePopup}>
 				<PopupCloseButton onClick={closePopup} />
+				<PopupTitle>{activeImagePopup?.title}</PopupTitle>
 
-				{activeImagePopup?.title && (
-					<PopupTitle>{activeImagePopup?.title}</PopupTitle>
-				)}
 				<PopupImageContainer>
-					{activeImagePopup && (
-						<PopupImage
-							src={activeImagePopup.url}
-							alt="johncovv project image"
-							onClick={(e) => e.stopPropagation()}
-						/>
-					)}
+					<PopupArrayPrevious
+						$active={hasNextImage}
+						onClick={(e) => handlePrevious(e, activeImagePopup?.url)}
+					/>
+
+					<PopupArrayNext
+						$active={hasPreviousImage}
+						onClick={(e) => handleNext(e, activeImagePopup?.url)}
+					/>
+
+					<PopupImage
+						src={activeImagePopup?.url}
+						alt="johncovv project"
+						onClick={(e) => e.stopPropagation()}
+					/>
 				</PopupImageContainer>
 			</PopupContent>
 		</>
