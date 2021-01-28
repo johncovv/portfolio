@@ -2,6 +2,8 @@ import styled, { css } from 'styled-components';
 
 import { VscChromeClose } from 'react-icons/vsc';
 
+import LoadingGIF from '../../../assets/static/loading.gif';
+
 export const Content = styled.div`
 	margin-top: 50px;
 
@@ -50,6 +52,7 @@ export const ImageItemContainer = styled.div`
 export const Source = styled.img`
 	width: 100%;
 	height: 100%;
+	display: block;
 	object-fit: cover;
 
 	transition: transform 200ms;
@@ -57,6 +60,11 @@ export const Source = styled.img`
 	box-shadow: ${({ theme }) => theme.shadow.default};
 	border: 1px solid #000;
 	border-radius: 8px;
+
+	background-image: url(${LoadingGIF});
+	background-size: 20px;
+	background-repeat: no-repeat;
+	background-position: center;
 
 	&:hover {
 		transform: scale(1.05);

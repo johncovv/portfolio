@@ -94,7 +94,9 @@ const ProjectDetails: React.FunctionComponent = () => {
 				)}
 			</ButtonContainer>
 
-			<About>{project.description}</About>
+			<About>
+				{project.description.replace(/\n/g, '<br/>').replace(/\s/g, ' ')}
+			</About>
 
 			{project.technologies && project.technologies.length > 0 && (
 				<TechnologiesGroup>

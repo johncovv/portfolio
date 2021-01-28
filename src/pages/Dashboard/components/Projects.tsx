@@ -30,7 +30,7 @@ const Projects: React.FunctionComponent = () => {
 
 					<ButtonContainer>
 						{!detailsUrl && url && (
-							<ButtonLink onClick={() => window.open(url, '_target')}>
+							<ButtonLink onClick={() => window.open(url, '_blank')}>
 								<BiLink size={22} color="#282929" />
 								Visualizar
 							</ButtonLink>
@@ -44,7 +44,7 @@ const Projects: React.FunctionComponent = () => {
 						)}
 
 						{github && github.length > 0 && (
-							<ButtonProject onClick={() => window.open(github, '_target')}>
+							<ButtonProject onClick={() => window.open(github, '_blank')}>
 								<IoLogoGithub size={22} color="#282929" />
 								Abrir Projeto
 							</ButtonProject>
