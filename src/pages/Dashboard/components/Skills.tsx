@@ -15,7 +15,7 @@ import {
 
 const Skills: React.FunctionComponent = () => {
 	const handleClickSkill = (url: string, index: number): void => {
-		if (index !== 0 && window.innerWidth >= 768) window.open(url, '_target');
+		if (index !== 0 && window.innerWidth >= 768) window.open(url, '_blank');
 	};
 
 	return (
@@ -36,7 +36,7 @@ const Skills: React.FunctionComponent = () => {
 						<Button
 							type="button"
 							isFirst={!!(index === 0)}
-							onClick={() => window.open(url, '_target')}
+							onClick={() => window.open(url, '_blank')}
 						>
 							<BiLink size={22} color="#282929" />
 							Saiba mais

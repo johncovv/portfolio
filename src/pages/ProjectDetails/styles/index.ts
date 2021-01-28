@@ -51,16 +51,14 @@ export const Button = styled.button`
 	}
 `;
 
-export const About = styled(ReactMarkdown)`
+export const About = styled(ReactMarkdown).attrs({
+	allowDangerousHtml: true,
+})`
 	white-space: pre-line;
 	color: ${({ theme }) => theme.text.secondary};
 
 	& strong {
 		color: ${({ theme }) => theme.text.primary};
-	}
-
-	& p:not(:last-child) {
-		margin-bottom: 15px;
 	}
 `;
 

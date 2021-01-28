@@ -11,7 +11,7 @@ import {
 
 const SocialMedias: React.FunctionComponent = () => {
 	function handleOpenLink(link: string): void {
-		window.open(link, '_target');
+		window.open(link, '_blank');
 	}
 
 	return (

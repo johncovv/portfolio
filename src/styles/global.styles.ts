@@ -35,6 +35,7 @@ export default createGlobalStyle`
 		background-color: ${({ theme }) => theme.background.primary};
 		color: ${({ theme }) => theme.text.primary};
 		font-size: 16px;
+		line-height: 1.35;
 	}
 
 	body, button, a {
