@@ -46,6 +46,14 @@ export const Project = styled.div`
 export const Title = styled.p`
 	margin-bottom: 15px;
 	font-family: 'JetBrainsMono Bold';
+
+	display: flex;
+	align-items: center;
+`;
+
+export const Icon = styled.img`
+	width: 20px;
+	margin-right: 10px;
 `;
 
 export const Description = styled(ReactMarkdown)`
