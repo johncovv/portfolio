@@ -1,4 +1,4 @@
-import { FaHtml5, FaSass, FaNodeJs, FaReact } from 'react-icons/fa';
+import { FaHtml5, FaSass, FaNodeJs, FaReact, FaAngular } from 'react-icons/fa';
 import { IoLogoGithub } from 'react-icons/io';
 import { SiJavascript } from 'react-icons/si';
 
@@ -10,6 +10,14 @@ export default [
 		Icon: FaReact,
 		description:
 			'O React é uma biblioteca JavaScript de código aberto com foco em criar interfaces de usuário em páginas web. É mantido pelo Facebook, Instagram, outras empresas e uma comunidade de desenvolvedores individuais.\nUtilizado em sites como Facebook, Netflix, Dropbox, Atlassian, Airbnb, Reddit, BBC, Cloudflare e outros.',
+	},
+	{
+		name: 'Angular',
+		color: '#dd0031',
+		url: 'https://github.com/topics/angular',
+		Icon: FaAngular,
+		description:
+			'É um framework JavaScript de código aberto mantido pela Google para a construção de SPA (Single Page Application)',
 	},
 	{
 		name: 'Github',
