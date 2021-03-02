@@ -1,6 +1,7 @@
 export interface Project {
 	name: string;
 	alias?: string;
+	icon?: { alt?: string; source: string };
 	url?: string;
 	detailsUrl?: string;
 	uiDesign?: { type: 'Figma' | 'Adobe XD' | 'Photoshop'; url: string };
@@ -15,6 +16,7 @@ export interface Project {
 export default [
 	{
 		name: 'ExReality',
+		icon: { source: 'https://i.imgur.com/ojFVFQB.png', alt: 'ExReality Logo' },
 		alert: {
 			type: 'error',
 			message: 'Este projeto saiu do ar em Dezembro de 2020!',
@@ -77,6 +79,7 @@ export default [
 	{
 		name: 'Mp Auto',
 		alias: 'MpAuto',
+		icon: { source: 'https://i.imgur.com/WY82uIw.png', alt: 'Mp Auto Logo' },
 		url: 'https://mpauto.com.br',
 		detailsUrl: '/project/MpAuto',
 		github: '',
@@ -122,6 +125,7 @@ export default [
 	{
 		name: 'Devian Bot',
 		alias: 'Devian',
+		icon: { source: 'https://i.imgur.com/RzEpatd.png', alt: 'Devian Logo' },
 		alert: { type: 'warning', message: 'Projeto em desenvolvimento!' },
 		url: 'https://devian.johncovv.com',
 		detailsUrl: '/project/Devian',

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-import { useHistory } from 'react-router-dom';
+import { useLocation, useHistory } from 'react-router-dom';
 
 import GithubButton from './components/GithubButton';
 import EmailButton from './components/EmailButton';
@@ -11,11 +11,27 @@ import Projects from './components/Projects';
 import { Content, LogoTitle, Title, About } from './styles';
 
 const Dashboard: React.FunctionComponent = () => {
-	const { location, push } = useHistory();
+	const location = useLocation();
+	const navigation = useHistory();
 
 	useEffect(() => {
-		if (location.hash.length > 0) push('/');
-	}, [location.hash, push]);
+		if (!location.state) return;
+
+		const { scrollTo } = location.state as { scrollTo?: string };
+
+		if (!scrollTo) return;
+
+		const elementToScroll = document.querySelector(`#${scrollTo}`) as
+			| HTMLDivElement
+			| undefined;
+
+		if (elementToScroll) {
+			elementToScroll.scrollIntoView();
+
+			navigation.replace('/', { scrollTo: undefined });
+		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [location]);
 
 	return (
 		<Content>
@@ -49,12 +65,14 @@ const Dashboard: React.FunctionComponent = () => {
 			<Title style={{ paddingTop: 130 }} id="skills">
 				Skills
 			</Title>
+
 			<Skills />
 
 			{/* projects */}
 			<Title style={{ paddingTop: 130 }} id="projects">
 				Projetos
 			</Title>
+
 			<Projects />
 		</Content>
 	);

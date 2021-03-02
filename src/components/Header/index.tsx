@@ -29,14 +29,18 @@ const Header: React.FunctionComponent<HeaderProps> = ({
 		window.scrollTo({ top: 0, behavior: 'smooth' });
 	};
 
+	const navigateTo = (hash?: string): void => {
+		push({ pathname: '/', state: { scrollTo: hash } });
+	};
+
 	return (
 		<Content>
 			<Container>
 				<Logo onClick={handleLogoClick} />
 
 				<NavItems>
-					<Item href="/#skills">Skills</Item>
-					<Item href="/#projects">Projetos</Item>
+					<Item onClick={() => navigateTo('skills')}>Skills</Item>
+					<Item onClick={() => navigateTo('projects')}>Projetos</Item>
 
 					<TogglerButton onClick={toggleTheme}>
 						{isDark ? <IoMdSunny size={29} /> : <IoMdMoon size={29} />}
