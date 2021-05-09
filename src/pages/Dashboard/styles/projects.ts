@@ -44,9 +44,10 @@ export const Project = styled.div`
 `;
 
 export const Title = styled.p`
-	margin-bottom: 15px;
-	font-family: 'JetBrainsMono Bold';
+	font-family: 'JetBrains Mono', monospace;
+	font-weight: 700;
 
+	margin-bottom: 15px;
 	display: flex;
 	align-items: center;
 `;
@@ -76,7 +77,9 @@ export const ButtonContainer = styled.div`
 `;
 
 export const ButtonLink = styled.button`
-	font-family: 'JetBrainsMono Bold';
+	font-family: 'JetBrains Mono', monospace;
+	font-weight: 700;
+
 	background-color: ${({ theme }) => theme.colors.orange};
 	margin-top: 15px;
 	border: none;
@@ -102,7 +105,9 @@ export const ButtonLink = styled.button`
 `;
 
 export const ButtonProject = styled.button`
-	font-family: 'JetBrainsMono Bold';
+	font-family: 'JetBrains Mono', monospace;
+	font-weight: 700;
+
 	background-color: ${({ theme }) => theme.colors.orange};
 	margin-top: 15px;
 	border: none;

@@ -24,7 +24,8 @@ export const Content = styled.button`
 `;
 
 export const Text = styled.p`
-	font-family: 'JetBrainsMono Bold';
+	font-family: 'JetBrains Mono', monospace;
+	font-weight: 700;
 	color: ${({ theme }) => theme.colors.dark};
 	margin-left: 10px;
 `;

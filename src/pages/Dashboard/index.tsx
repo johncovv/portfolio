@@ -4,7 +4,7 @@ import { useLocation, useHistory } from 'react-router-dom';
 
 import GithubButton from './components/GithubButton';
 import EmailButton from './components/EmailButton';
-import SocialMedias from '../../components/SocialMedias';
+import SocialMedias from '../../core/SocialMedias';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 
@@ -26,7 +26,7 @@ const Dashboard: React.FunctionComponent = () => {
 			| undefined;
 
 		if (elementToScroll) {
-			elementToScroll.scrollIntoView();
+			elementToScroll.scrollIntoView({ behavior: 'smooth' });
 
 			navigation.replace('/', { scrollTo: undefined });
 		}

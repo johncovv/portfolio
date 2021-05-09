@@ -1,21 +1,6 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
-import JetBrainsMonoRegular from '../assets/fonts/JetBrainsMono-Regular.ttf';
-import JetBrainsMonoBold from '../assets/fonts/JetBrainsMono-Bold.ttf';
-
 export default createGlobalStyle`
-	@font-face {
-		font-family: 'JetBrainsMono Regular';
-		src: url(${JetBrainsMonoRegular});
-		font-weight: 300;
-	}
-
-	@font-face {
-		font-family: 'JetBrainsMono Bold';
-		src: url(${JetBrainsMonoBold});
-		font-weight: 700;
-	}
-
 	::selection {
 		background-color: rgba(255, 137, 52, 0.31);
 		color: ${({ theme }) => theme.text.primary};
@@ -39,7 +24,7 @@ export default createGlobalStyle`
 	}
 
 	body, button, a {
-		font-family: 'JetBrainsMono Regular';
+		font-family: 'JetBrains Mono', monospace;
 	}
 
 	a {

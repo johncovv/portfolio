@@ -8,9 +8,9 @@ import { ThemeProvider } from 'styled-components';
 import Routes from './routes';
 
 // components
-import Header from './components/Header';
-import BackToTop from './components/BackToTop';
-import Footer from './components/Footer';
+import Header from './core/Header';
+import BackToTop from './core/BackToTop';
+import Footer from './core/Footer';
 
 // themes
 import lightTheme from './styles/themes/light';

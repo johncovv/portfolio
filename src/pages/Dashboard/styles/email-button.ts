@@ -19,7 +19,9 @@ export const Content = styled.a`
 `;
 
 export const Text = styled.p`
-	font-family: 'JetBrainsMono Bold';
+	font-family: 'JetBrains Mono', monospace;
+	font-weight: 700;
+
 	margin-left: 10px;
 	font-size: 18px;
 	color: ${({ theme }) => theme.text.primary};

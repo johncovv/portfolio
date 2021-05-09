@@ -117,7 +117,8 @@ export const Button = styled.button<ButtonAttr>`
 	border-radius: 8px;
 	margin-left: auto;
 
-	font-family: 'JetBrainsMono Bold';
+	font-family: 'JetBrains Mono', monospace;
+	font-weight: 700;
 	background-color: ${({ theme }) => theme.colors.orange};
 
 	display: ${(props) => (props.isFirst ? 'flex' : 'none')};

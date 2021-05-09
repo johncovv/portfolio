@@ -16,7 +16,9 @@ export const ButtonContainer = styled.div`
 `;
 
 export const Button = styled.button`
-	font-family: 'JetBrainsMono Bold';
+	ffont-family: 'JetBrains Mono', monospace;
+	font-weight: 700;
+
 	background-color: ${({ theme }) => theme.colors.orange};
 	border: none;
 	color: ${({ theme }) => theme.colors.dark};

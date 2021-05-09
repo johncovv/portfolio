@@ -11,7 +11,8 @@ export const LogoTitle = styled.div`
 
 	& > p.primary {
 		font-size: 55px;
-		font-family: 'JetBrainsMono Bold';
+		font-family: 'JetBrains Mono', monospace;
+		font-weight: 700;
 
 		@media (max-width: 767px) {
 			display: flex;
@@ -34,7 +35,8 @@ export const LogoTitle = styled.div`
 `;
 
 export const About = styled.p`
-	font-family: 'JetBrainsMono Bold';
+	font-family: 'JetBrains Mono', monospace;
+	font-weight: 700;
 	font-size: 18px;
 
 	color: ${({ theme }) => theme.text.secondary};
@@ -50,7 +52,8 @@ export const About = styled.p`
 `;
 
 export const Title = styled.p`
-	font-family: 'JetBrainsMono Bold';
+	font-family: 'JetBrains Mono', monospace;
+	font-weight: 700;
 	margin-top: 25px;
 	font-size: 22px;
 `;
