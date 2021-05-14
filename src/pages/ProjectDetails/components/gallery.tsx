@@ -9,6 +9,7 @@ import {
 	PopupCloseButton,
 	PopupImageContainer,
 	PopupTitle,
+	ImageScrollableContainer,
 	PopupImage,
 	PopupArrayPrevious,
 	PopupArrayNext,
@@ -89,11 +90,13 @@ const ProjectGallery: React.FunctionComponent<GalleryProps> = ({
 						onClick={(e) => handleNext(e, activeImagePopup?.url)}
 					/>
 
-					<PopupImage
-						src={activeImagePopup?.url}
-						alt="johncovv project"
-						onClick={(e) => e.stopPropagation()}
-					/>
+					<ImageScrollableContainer>
+						<PopupImage
+							src={activeImagePopup?.url}
+							alt="johncovv project"
+							onClick={(e) => e.stopPropagation()}
+						/>
+					</ImageScrollableContainer>
 				</PopupImageContainer>
 			</PopupContent>
 		</>

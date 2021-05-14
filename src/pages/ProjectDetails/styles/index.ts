@@ -5,8 +5,23 @@ import ReactMarkdown from 'react-markdown';
 
 export const Content = styled.div``;
 
+export const TitleContainer = styled.div`
+	display: flex;
+	flex-flow: row wrap;
+`;
+
 export const Title = styled.h1`
-	margin-bottom: 25px;
+	margin-bottom: 1.5rem;
+	line-break: auto;
+`;
+
+export const ProjectIcon = styled.div`
+	margin-right: 0.5rem;
+	width: 3rem;
+
+	img {
+		width: 100%;
+	}
 `;
 
 export const ButtonContainer = styled.div`
@@ -16,7 +31,7 @@ export const ButtonContainer = styled.div`
 `;
 
 export const Button = styled.button`
-	ffont-family: 'JetBrains Mono', monospace;
+	font-family: 'JetBrains Mono', monospace;
 	font-weight: 700;
 
 	background-color: ${({ theme }) => theme.colors.orange};

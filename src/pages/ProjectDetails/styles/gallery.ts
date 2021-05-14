@@ -139,6 +139,50 @@ export const PopupImageContainer = styled.div`
 	user-select: none;
 `;
 
+export const ImageScrollableContainer = styled.div`
+	height: fit-content;
+	max-height: 100%;
+
+	border-radius: 8px;
+	overflow-y: auto;
+
+	position: relative;
+
+	&::before {
+		content: '';
+		position: fixed;
+		display: block;
+		height: 20%;
+
+		pointer-events: none;
+
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 1000;
+
+		background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.4));
+	}
+
+	&::-webkit-scrollbar {
+		width: 0.75rem;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: ${({ theme }) => theme.colors.orange};
+
+		border-top-right-radius: 0.5rem;
+		border-bottom-right-radius: 0.5rem;
+	}
+
+	&::-webkit-scrollbar-track {
+		background-color: rgba(255, 255, 255, 0.2);
+
+		border-top-right-radius: 0.5rem;
+		border-bottom-right-radius: 0.5rem;
+	}
+`;
+
 export const PopupTitle = styled.strong`
 	margin-bottom: 15px;
 	font-size: 18px;
@@ -147,8 +191,7 @@ export const PopupTitle = styled.strong`
 
 export const PopupImage = styled.img`
 	max-width: 100%;
-	max-height: 100%;
-	border-radius: 8px;
+	display: block;
 `;
 
 interface ArrowAttr {
@@ -161,7 +204,7 @@ export const PopupArrayPrevious = styled(IoIosArrowDropleftCircle).attrs({
 	position: absolute;
 	z-index: 1000;
 	top: 50%;
-	left: 5px;
+	left: 0.3rem;
 	transform: translateY(-50%);
 
 	transition: fill 200ms;
@@ -188,7 +231,7 @@ export const PopupArrayNext = styled(IoIosArrowDroprightCircle).attrs({
 	position: absolute;
 	z-index: 1000;
 	top: 50%;
-	right: 5px;
+	right: calc(0.3rem + 0.75rem);
 	transform: translateY(-50%);
 
 	transition: fill 200ms;
