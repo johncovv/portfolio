@@ -22,10 +22,17 @@ export default [
 			alt: 'Governo do estado de São Paulo',
 		},
 		alert: { type: 'warning', message: 'Projeto em desenvolvimento!' },
-		url: 'https://proacexpresso.com.br',
+		url: 'https://www.proacexpresso.sp.gov.br',
 		detailsUrl: '/project/Proac',
-		description:
-			'Este é um projeto **pessoal**, onde o objetivo inicial era aprender a desenvolver um bot para **Discord** rodando em **Nodejs**.\nApós terminar os comandos básicos, decidi criar também um correspondente web, onde os administradores de servidores(Discord) poderiam configurar o bot facilmente pela plataforma.',
+		description: `Projeto financiado pela secretaria cultural do **[Governo estadual de São Paulo](https://www.saopaulo.sp.gov.br/)**.\n\n*Programa de Ação Cultural(Proac) é uma legislação de incentivo à cultura do Estado de São Paulo criada em 2006 através da Lei nº 12.268/2006.*\n\nO intuito do desenvolvimento da plataforma **Proac Expresso** é de atualizar o antigo sistema de inscrições públicas ao incentivo cultural.
+		`,
+		partners: [
+			{
+				job: 'Desenvolvimento de infra, backend(NodeJs) e frontend.',
+				name: 'BNP Soluções',
+				url: 'https://www.bnpsolucoes.com.br/',
+			},
+		],
 		images: [
 			{
 				title: 'Login',

@@ -105,7 +105,7 @@ const ProjectDetails: React.FunctionComponent = () => {
 				)}
 			</ButtonContainer>
 
-			<About>
+			<About linkTarget="_blank">
 				{project.description.replace(/\n/g, '<br/>').replace(/\s/g, ' ')}
 			</About>
 
