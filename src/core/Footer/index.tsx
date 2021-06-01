@@ -17,7 +17,7 @@ const Footer: React.FunctionComponent = () => (
 			- Desenvolvido em 2020/2021
 		</Info>
 
-		<SocialMedias size={25} />
+		<SocialMedias sizeIcons={25} showEmail />
 	</Content>
 );
 

@@ -17,6 +17,8 @@ import ProjectsObj, { Project } from '../../assets/objects/projects';
 // styles
 import {
 	Content,
+	TitleContainer,
+	ProjectIcon,
 	Title,
 	ButtonContainer,
 	Button,
@@ -61,7 +63,16 @@ const ProjectDetails: React.FunctionComponent = () => {
 					<IoIosAlert size={22} /> {project.alert.message}
 				</Alert>
 			)}
-			<Title>{project.name}</Title>
+
+			<TitleContainer>
+				{project.icon && (
+					<ProjectIcon>
+						<img src={project.icon.source} alt={project.icon.source} />
+					</ProjectIcon>
+				)}
+
+				<Title>{project.name}</Title>
+			</TitleContainer>
 
 			<ButtonContainer>
 				{project.url && (
@@ -94,7 +105,7 @@ const ProjectDetails: React.FunctionComponent = () => {
 				)}
 			</ButtonContainer>
 
-			<About>
+			<About linkTarget="_blank">
 				{project.description.replace(/\n/g, '<br/>').replace(/\s/g, ' ')}
 			</About>
 

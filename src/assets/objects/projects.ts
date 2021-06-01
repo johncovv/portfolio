@@ -15,6 +15,88 @@ export interface Project {
 
 export default [
 	{
+		name: 'Proac Expresso 2021',
+		alias: 'Proac',
+		icon: {
+			source: 'https://i.imgur.com/0eK9bs0.png',
+			alt: 'Governo do estado de São Paulo',
+		},
+		alert: { type: 'warning', message: 'Projeto em desenvolvimento!' },
+		url: 'https://www.proacexpresso.sp.gov.br',
+		detailsUrl: '/project/Proac',
+		description: `Projeto financiado pela secretaria cultural do **[Governo estadual de São Paulo](https://www.saopaulo.sp.gov.br/)**.\n\n*Programa de Ação Cultural(Proac) é uma legislação de incentivo à cultura do Estado de São Paulo criada em 2006 através da Lei nº 12.268/2006.*\n\nO intuito do desenvolvimento da plataforma **Proac Expresso** é de atualizar o antigo sistema de inscrições públicas ao incentivo cultural.
+		`,
+		partners: [
+			{
+				job: 'Desenvolvimento de infra, backend(NodeJs) e frontend.',
+				name: 'BNP Soluções',
+				url: 'https://www.bnpsolucoes.com.br/',
+			},
+		],
+		images: [
+			{
+				title: 'Login',
+				url: 'https://i.imgur.com/2JwFZ9P.png',
+			},
+			{
+				title: 'Registrar-se',
+				url: 'https://i.imgur.com/n6oWV7M.png',
+			},
+			{
+				title: 'Registrar-se - (E-mail válido)',
+				url: 'https://i.imgur.com/phFM1kJ.png',
+			},
+			{
+				title: 'Registrar-se - (E-mail já cadastrado)',
+				url: 'https://i.imgur.com/qlLGncI.png',
+			},
+			{
+				title: 'Esqueci minha senha',
+				url: 'https://i.imgur.com/0pmMFd9.png',
+			},
+			{
+				title: 'Painel inicial',
+				url: 'https://i.imgur.com/3n1Y9SF.png',
+			},
+			{
+				title: 'Meus projetos',
+				url: 'https://i.imgur.com/k1Q3nA2.png',
+			},
+			{
+				title: 'Meus projetos - (Vazio)',
+				url: 'https://i.imgur.com/NfPjFvp.png',
+			},
+			{
+				title: 'Meus proponentes',
+				url: 'https://i.imgur.com/qQ4P6CB.png',
+			},
+			{
+				title: 'Criar ou editar proponente',
+				url: 'https://i.imgur.com/OJZeGXI.png',
+			},
+			{
+				title: 'Criar ou buscar cooperativa',
+				url: 'https://i.imgur.com/GpDL5Sy.png',
+			},
+			{
+				title: 'Lista de editais',
+				url: 'https://i.imgur.com/l8uXNtL.png',
+			},
+			{
+				title: 'Descrição do edital (Modalidades)',
+				url: 'https://i.imgur.com/Ch2P4FX.png',
+			},
+			{
+				title: 'Inscrição no edital',
+				url: 'https://i.imgur.com/H4WJjej.png',
+			},
+		],
+		technologies: [
+			{ name: 'Angular', url: 'https://angular.io/docs' },
+			{ name: 'Ant Design', url: 'https://ng.ant.design/docs/introduce/en' },
+		],
+	},
+	{
 		name: 'ExReality',
 		icon: { source: 'https://i.imgur.com/ojFVFQB.png', alt: 'ExReality Logo' },
 		alert: {

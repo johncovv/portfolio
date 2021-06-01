@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { IoLogoFacebook, IoLogoTwitter } from 'react-icons/io';
+import { IoLogoFacebook, IoLogoTwitter, IoMdMail } from 'react-icons/io';
 
 import { FaWhatsapp, FaDiscord, FaLinkedin } from 'react-icons/fa';
 
@@ -32,3 +32,5 @@ export const DiscordButton = styled(FaDiscord)``;
 export const WhatsappButton = styled(FaWhatsapp)``;
 
 export const LinkedinButton = styled(FaLinkedin)``;
+
+export const EmailButton = styled(IoMdMail)``;
