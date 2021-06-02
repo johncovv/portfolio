@@ -138,9 +138,9 @@ export const PopupImageContainer = styled.div`
 	max-width: 1024px;
 	width: 100%;
 
-	height: calc(100% - 50px - 1rem - 1.5rem);
+	height: calc(100% - 50px - 1rem - 1.5rem - 0.5rem);
 	@media (min-width: 768px) {
-		height: calc(100% - 100px - 1rem - 1.5rem);
+		height: calc(100% - 100px - 1rem - 1.5rem - 0.5rem);
 	}
 
 	display: flex;
