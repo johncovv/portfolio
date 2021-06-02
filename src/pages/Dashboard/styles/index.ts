@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import ReactMarkdown from 'react-markdown';
+
 export const Content = styled.div`
 	position: relative;
 `;
@@ -56,4 +58,12 @@ export const Title = styled.p`
 	font-weight: 700;
 	margin-top: 25px;
 	font-size: 22px;
+`;
+
+export const OthersItem = styled(ReactMarkdown)`
+	p {
+		color: ${({ theme }) => theme.text.secondary};
+	}
+
+	font-family: 'JetBrains Mono', monospace;
 `;

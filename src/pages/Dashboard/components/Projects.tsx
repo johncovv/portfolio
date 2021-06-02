@@ -42,7 +42,7 @@ const Projects: React.FunctionComponent = () => {
 							)}{' '}
 							{name}
 						</Title>
-						<Description>{description}</Description>
+						<Description linkTarget="_blank">{description}</Description>
 
 						<ButtonContainer>
 							{!detailsUrl && url && (

@@ -8,7 +8,7 @@ import SocialMedias from '../../core/SocialMedias';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 
-import { Content, LogoTitle, Title, About } from './styles';
+import { Content, LogoTitle, Title, About, OthersItem } from './styles';
 
 const Dashboard: React.FunctionComponent = () => {
 	const location = useLocation();
@@ -52,6 +52,11 @@ const Dashboard: React.FunctionComponent = () => {
 				com desenvolvimento utilizando tecnologias <span>Javascript</span> como{' '}
 				<span>NodeJs</span>, <span>React</span> e <span>React Native</span>.
 			</About>
+
+			<OthersItem linkTarget="_blank">
+				📌 Atualmente prestando serviços a [Bnp Soluções em
+				TI](https://www.bnpsolucoes.com.br/).
+			</OthersItem>
 
 			<GithubButton>Visite meu Github</GithubButton>
 
