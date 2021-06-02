@@ -8,7 +8,6 @@ import {
 	PopupContent,
 	PopupCloseButton,
 	PopupImageContainer,
-	PopupTitle,
 	ImageScrollableContainer,
 	PopupImage,
 	PopupArrayPrevious,
@@ -97,7 +96,6 @@ const ProjectGallery: React.FunctionComponent<IGalleryProps> = ({
 
 			<PopupContent active={!!activeImagePopup} onClick={closePopup}>
 				<PopupCloseButton onClick={closePopup} />
-				<PopupTitle>{activeImagePopup?.title}</PopupTitle>
 
 				<PopupImageContainer>
 					<ImageScrollableContainer>

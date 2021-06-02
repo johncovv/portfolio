@@ -89,10 +89,15 @@ export const PopupContent = styled.div<PopupAttr>`
 	left: 0;
 	z-index: 10000;
 
-	background-color: rgba(0, 0, 0, 0.7);
-	backdrop-filter: blur(7px);
-	padding: 70px 25px 25px;
 	transition: 200ms;
+	backdrop-filter: blur(7px);
+	background-color: rgba(0, 0, 0, 0.7);
+
+	padding: 70px 1.5rem 1.5rem;
+
+	@media (min-width: 1240px) {
+		padding: 1.5rem !important;
+	}
 
 	${({ active }) =>
 		active
@@ -113,14 +118,16 @@ export const PopupContent = styled.div<PopupAttr>`
 export const PopupCloseButton = styled(VscChromeClose).attrs({
 	size: 50,
 })`
-	fill: ${({ theme }) => theme.colors.orange};
-
-	position: absolute;
 	top: 10px;
 	right: 10px;
+	z-index: 10000;
 	cursor: pointer;
+	position: absolute;
 
 	transition: transform 200ms;
+
+	fill: ${({ theme }) => theme.colors.orange};
+	filter: drop-shadow(0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.75));
 
 	&:hover {
 		transform: scale(1.1);
@@ -131,9 +138,9 @@ export const PopupImageContainer = styled.div`
 	max-width: 1024px;
 	width: 100%;
 
-	height: calc(100% - 50px - 1rem - 1.5rem - 1.5rem - 1.5rem);
+	height: calc(100% - 50px - 1rem - 1.5rem);
 	@media (min-width: 768px) {
-		height: calc(100% - 100px - 1rem - 1.5rem - 1.5rem - 1.5rem);
+		height: calc(100% - 100px - 1rem - 1.5rem);
 	}
 
 	display: flex;
@@ -185,12 +192,6 @@ export const ImageScrollableContainer = styled.div`
 		border-top-right-radius: 0.5rem;
 		border-bottom-right-radius: 0.5rem;
 	}
-`;
-
-export const PopupTitle = styled.strong`
-	margin-bottom: 15px;
-	font-size: 18px;
-	color: ${({ theme }) => theme.colors.orange};
 `;
 
 export const PopupImage = styled.img`
