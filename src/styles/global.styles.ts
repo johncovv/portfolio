@@ -21,6 +21,21 @@ export default createGlobalStyle`
 		color: ${({ theme }) => theme.text.primary};
 		font-size: 16px;
 		line-height: 1.35;
+
+		::-webkit-scrollbar {
+			width: 0.75rem;
+		}
+
+		::-webkit-scrollbar-track {
+			background-color: ${({ theme }) => theme.background.secondary};
+		}
+
+		::-webkit-scrollbar-thumb {
+			background-color: ${({ theme }) => theme.colors.orange};
+
+			border-top-left-radius: 0.5rem;
+			border-bottom-left-radius: 0.5rem;
+		}
 	}
 
 	body, button, a {

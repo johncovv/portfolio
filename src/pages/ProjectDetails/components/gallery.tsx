@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 
 import {
 	Content,
@@ -13,19 +13,47 @@ import {
 	PopupImage,
 	PopupArrayPrevious,
 	PopupArrayNext,
+	DotsContainer,
+	ThumbnailsMainContainer,
+	ThumbnailsContainer,
+	ThumbnailButton,
 } from '../styles/gallery';
 
-interface GalleryProps {
-	images: Array<{ title?: string; url: string }>;
+interface IImageProps {
+	title?: string;
+	url: string;
+}
+interface IGalleryProps {
+	images: Array<IImageProps>;
 }
 
-const ProjectGallery: React.FunctionComponent<GalleryProps> = ({
+const ProjectGallery: React.FunctionComponent<IGalleryProps> = ({
 	images,
-}: GalleryProps) => {
-	const [activeImagePopup, setActiveImagePopup] = useState<{
-		title?: string;
-		url: string;
-	} | null>(null);
+}: IGalleryProps) => {
+	const thumbnailsContainer = useRef<HTMLDivElement>(null);
+
+	const [activeImagePopup, setActiveImagePopup] = useState<IImageProps | null>(
+		null,
+	);
+
+	const hasNextImage = !!images[
+		images.findIndex((img) => img.url === activeImagePopup?.url) - 1
+	];
+
+	const hasPreviousImage = !!images[
+		images.findIndex((img) => img.url === activeImagePopup?.url) + 1
+	];
+
+	useEffect(() => {
+		const activeThumbElement = document.querySelector(`.thumbnail-activated`);
+
+		if (activeThumbElement) {
+			activeThumbElement?.scrollIntoView({
+				behavior: 'smooth',
+				inline: 'center',
+			});
+		}
+	}, [activeImagePopup]);
 
 	const closePopup = (): void => setActiveImagePopup(null);
 
@@ -48,20 +76,12 @@ const ProjectGallery: React.FunctionComponent<GalleryProps> = ({
 
 			const selectedIndex = images.findIndex((img) => img.url === url);
 
-			const next = images[selectedIndex - 1];
+			const previous = images[selectedIndex - 1];
 
-			if (next) setActiveImagePopup(next);
+			if (previous) setActiveImagePopup(previous);
 		},
 		[images],
 	);
-
-	const hasNextImage = !!images[
-		images.findIndex((img) => img.url === activeImagePopup?.url) - 1
-	];
-
-	const hasPreviousImage = !!images[
-		images.findIndex((img) => img.url === activeImagePopup?.url) + 1
-	];
 
 	return (
 		<>
@@ -80,6 +100,29 @@ const ProjectGallery: React.FunctionComponent<GalleryProps> = ({
 				<PopupTitle>{activeImagePopup?.title}</PopupTitle>
 
 				<PopupImageContainer>
+					<ImageScrollableContainer>
+						<PopupImage
+							src={activeImagePopup?.url}
+							alt="johncovv project"
+							onClick={(e) => e.stopPropagation()}
+						/>
+					</ImageScrollableContainer>
+				</PopupImageContainer>
+
+				<DotsContainer onClick={(e) => e.stopPropagation()}>
+					{images.map((image, index) => (
+						/* eslint-disable jsx-a11y/click-events-have-key-events */
+						/* eslint-disable jsx-a11y/no-static-element-interactions */
+						<span
+							key={`dot-${index}`}
+							className={
+								activeImagePopup?.url === image.url ? 'activated' : undefined
+							}
+							onClick={() => setActiveImagePopup(image)}
+						/>
+					))}
+				</DotsContainer>
+				<ThumbnailsMainContainer>
 					<PopupArrayPrevious
 						$active={hasNextImage}
 						onClick={(e) => handlePrevious(e, activeImagePopup?.url)}
@@ -89,15 +132,26 @@ const ProjectGallery: React.FunctionComponent<GalleryProps> = ({
 						$active={hasPreviousImage}
 						onClick={(e) => handleNext(e, activeImagePopup?.url)}
 					/>
-
-					<ImageScrollableContainer>
-						<PopupImage
-							src={activeImagePopup?.url}
-							alt="johncovv project"
-							onClick={(e) => e.stopPropagation()}
-						/>
-					</ImageScrollableContainer>
-				</PopupImageContainer>
+					<ThumbnailsContainer
+						ref={thumbnailsContainer}
+						onClick={(e) => e.stopPropagation()}
+					>
+						{images.map((image, index) => (
+							<ThumbnailButton
+								id={`thumbnail-${index}`}
+								className={
+									activeImagePopup?.url === image.url
+										? 'thumbnail-activated'
+										: undefined
+								}
+								key={`thumbnail-${index}`}
+								backgroundUrl={image.url}
+								isActivated={activeImagePopup?.url === image.url}
+								onClick={() => setActiveImagePopup(image)}
+							/>
+						))}
+					</ThumbnailsContainer>
+				</ThumbnailsMainContainer>
 			</PopupContent>
 		</>
 	);

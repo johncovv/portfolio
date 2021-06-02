@@ -130,7 +130,11 @@ export const PopupCloseButton = styled(VscChromeClose).attrs({
 export const PopupImageContainer = styled.div`
 	max-width: 1024px;
 	width: 100%;
-	height: calc(100% - (22px + 15px));
+
+	height: calc(100% - 50px - 1rem - 1.5rem - 1.5rem - 1.5rem);
+	@media (min-width: 768px) {
+		height: calc(100% - 100px - 1rem - 1.5rem - 1.5rem - 1.5rem);
+	}
 
 	display: flex;
 	justify-content: center;
@@ -176,7 +180,7 @@ export const ImageScrollableContainer = styled.div`
 	}
 
 	&::-webkit-scrollbar-track {
-		background-color: rgba(255, 255, 255, 0.2);
+		background-color: ${({ theme }) => theme.background.secondary};
 
 		border-top-right-radius: 0.5rem;
 		border-bottom-right-radius: 0.5rem;
@@ -194,12 +198,47 @@ export const PopupImage = styled.img`
 	display: block;
 `;
 
+// dots
+
+export const DotsContainer = styled.div`
+	margin-top: 1.5rem;
+
+	display: flex;
+	align-items: center;
+	flex-flow: row nowrap;
+
+	span {
+		border: none;
+		width: 0.5rem;
+		height: 0.5rem;
+		border-radius: 50%;
+		background-color: rgba(255, 255, 255, 0.5);
+
+		cursor: pointer;
+		transition: box-shadow 100ms;
+
+		&.activated {
+			background-color: ${({ theme }) => theme.colors.orange};
+		}
+
+		&:hover {
+			box-shadow: 0 0 0 0.1rem ${({ theme }) => theme.colors.orange};
+		}
+
+		&:not(:last-child) {
+			margin-right: 0.3rem;
+		}
+	}
+`;
+
+// thumbnail
+
 interface ArrowAttr {
 	$active: boolean;
 }
 
 export const PopupArrayPrevious = styled(IoIosArrowDropleftCircle).attrs({
-	size: 50,
+	size: 30,
 })<ArrowAttr>`
 	position: absolute;
 	z-index: 1000;
@@ -226,12 +265,12 @@ export const PopupArrayPrevious = styled(IoIosArrowDropleftCircle).attrs({
 `;
 
 export const PopupArrayNext = styled(IoIosArrowDroprightCircle).attrs({
-	size: 50,
+	size: 30,
 })<ArrowAttr>`
 	position: absolute;
 	z-index: 1000;
 	top: 50%;
-	right: calc(0.3rem + 0.75rem);
+	right: 0.3rem;
 	transform: translateY(-50%);
 
 	transition: fill 200ms;
@@ -250,4 +289,90 @@ export const PopupArrayNext = styled(IoIosArrowDroprightCircle).attrs({
 			: css`
 					opacity: 0.3;
 			  `}
+`;
+
+export const ThumbnailsMainContainer = styled.div`
+	height: 50px;
+
+	@media (min-width: 768px) {
+		height: 100px;
+	}
+
+	position: relative;
+	width: fit-content;
+
+	padding: 0 2.5rem;
+
+	margin-top: 1rem;
+
+	display: flex;
+	justify-content: center;
+	flex-flow: row nowrap;
+`;
+
+export const ThumbnailsContainer = styled.div`
+	height: 100%;
+	width: 100%;
+
+	display: flex;
+	flex-flow: row nowrap;
+
+	max-width: calc((75px * 3) + (1rem * 2));
+
+	@media (min-width: 560px) {
+		max-width: calc((75px * 5) + (1rem * 4));
+	}
+
+	@media (min-width: 768px) {
+		max-width: calc((150px * 4) + (1rem * 3));
+	}
+
+	@media (min-width: 1024px) {
+		max-width: calc((150px * 5) + (1rem * 4));
+	}
+
+	overflow-x: scroll;
+
+	&::-webkit-scrollbar {
+		display: none !important;
+	}
+`;
+
+interface ThumbnailButtonAttr {
+	isActivated?: boolean;
+	backgroundUrl: string;
+}
+
+export const ThumbnailButton = styled.div<ThumbnailButtonAttr>`
+	height: 100%;
+
+	min-width: 75px;
+	max-width: 75px;
+
+	@media (min-width: 768px) {
+		min-width: 150px;
+		max-width: 150px;
+	}
+
+	cursor: pointer;
+
+	background-image: url(${(props) => props.backgroundUrl});
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	transition: box-shadow 200ms ease-in-out;
+
+	border-radius: 8px;
+	box-shadow: inset 0px 0px 0px 3px
+		${({ isActivated, theme }) =>
+			isActivated ? theme.colors.orange : 'transparent'};
+
+	&:not(:last-child) {
+		margin-right: 0.5rem;
+	}
+
+	&:not(:first-child) {
+		margin-left: 0.5rem;
+	}
 `;
