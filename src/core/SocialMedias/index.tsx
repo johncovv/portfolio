@@ -2,12 +2,12 @@ import React, { HtmlHTMLAttributes } from 'react';
 
 import {
 	Content,
-	FacebookButton,
-	TwitterButton,
 	DiscordButton,
-	WhatsappButton,
-	LinkedinButton,
 	EmailButton,
+	FacebookButton,
+	LinkedinButton,
+	TwitterButton,
+	WhatsappButton,
 } from './styles';
 
 interface SocialMediasProps extends HtmlHTMLAttributes<HTMLDivElement> {

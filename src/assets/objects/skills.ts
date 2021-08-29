@@ -1,13 +1,13 @@
 import {
+	FaAngular,
 	FaHtml5,
-	FaSass,
+	FaLess,
 	FaNodeJs,
 	FaReact,
-	FaAngular,
-	FaLess,
+	FaSass,
 } from 'react-icons/fa';
+import { SiGit, SiJavascript, SiTypescript } from 'react-icons/si';
 import { IoLogoGithub } from 'react-icons/io';
-import { SiJavascript, SiTypescript, SiGit } from 'react-icons/si';
 
 export default [
 	{

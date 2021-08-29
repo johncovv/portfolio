@@ -2,20 +2,20 @@ import React, { useCallback, useEffect, useRef, useState } from 'react';
 
 import {
 	Content,
+	DotsContainer,
 	ImageItem,
 	ImageItemContainer,
-	Source,
-	PopupContent,
-	PopupCloseButton,
-	PopupImageContainer,
 	ImageScrollableContainer,
-	PopupImage,
-	PopupArrayPrevious,
 	PopupArrayNext,
-	DotsContainer,
-	ThumbnailsMainContainer,
-	ThumbnailsContainer,
+	PopupArrayPrevious,
+	PopupCloseButton,
+	PopupContent,
+	PopupImage,
+	PopupImageContainer,
+	Source,
 	ThumbnailButton,
+	ThumbnailsContainer,
+	ThumbnailsMainContainer,
 } from '../styles/gallery';
 
 interface IImageProps {

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
-import { useParams, useHistory } from 'react-router-dom';
+import { IoIosAlert, IoLogoGithub } from 'react-icons/io';
+import { useHistory, useParams } from 'react-router-dom';
 
 import { BiLink } from 'react-icons/bi';
-import { IoLogoGithub, IoIosAlert } from 'react-icons/io';
 import { CgFigma } from 'react-icons/cg';
-import { SiAdobexd } from 'react-icons/si';
 import { DiPhotoshop } from 'react-icons/di';
+import { SiAdobexd } from 'react-icons/si';
 
 // components
 import ProjectGallery from './components/gallery';
@@ -16,22 +16,22 @@ import ProjectsObj, { Project } from '../../assets/objects/projects';
 
 // styles
 import {
-	Content,
-	TitleContainer,
-	ProjectIcon,
-	Title,
-	ButtonContainer,
-	Button,
 	About,
 	Alert,
+	Button,
+	ButtonContainer,
+	Content,
+	Partner,
+	PartnerJob,
+	PartnerName,
 	PartnersGroup,
 	PartnersGroupTitle,
-	Partner,
-	PartnerName,
-	PartnerJob,
+	ProjectIcon,
+	Technologie,
 	TechnologiesGroup,
 	TechnologiesTitle,
-	Technologie,
+	Title,
+	TitleContainer,
 } from './styles';
 
 const ProjectDetails: React.FunctionComponent = () => {

@@ -5,12 +5,12 @@ import { BiLink } from 'react-icons/bi';
 import SkillsData from '../../../assets/objects/skills';
 
 import {
-	Content,
-	Skill,
-	Container,
-	Title,
-	Description,
 	Button,
+	Container,
+	Content,
+	Description,
+	Skill,
+	Title,
 } from '../styles/skills';
 
 const Skills: React.FunctionComponent = () => {

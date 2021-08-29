@@ -1,15 +1,14 @@
 import React from 'react';
 
+import { IoMdMoon, IoMdSunny } from 'react-icons/io';
 import { useHistory } from 'react-router-dom';
 
-import { IoMdSunny, IoMdMoon } from 'react-icons/io';
-
 import {
-	Content,
 	Container,
+	Content,
+	Item,
 	Logo,
 	NavItems,
-	Item,
 	TogglerButton,
 } from './styles';
 
@@ -29,8 +28,13 @@ const Header: React.FunctionComponent<HeaderProps> = ({
 		window.scrollTo({ top: 0, behavior: 'smooth' });
 	};
 
-	const navigateTo = (hash?: string): void => {
-		push({ pathname: '/', state: { scrollTo: hash } });
+	const navigateTo = (params: { hash?: string; pathname: string }): void => {
+		const { pathname, hash } = params;
+
+		push({
+			pathname,
+			state: { scrollTo: hash || '' },
+		});
 	};
 
 	return (
@@ -39,8 +43,12 @@ const Header: React.FunctionComponent<HeaderProps> = ({
 				<Logo onClick={handleLogoClick} />
 
 				<NavItems>
-					<Item onClick={() => navigateTo('skills')}>Skills</Item>
-					<Item onClick={() => navigateTo('projects')}>Projetos</Item>
+					<Item onClick={() => navigateTo({ pathname: '/', hash: 'skills' })}>
+						Skills
+					</Item>
+					<Item onClick={() => navigateTo({ pathname: '/', hash: 'projects' })}>
+						Projetos
+					</Item>
 
 					<TogglerButton onClick={toggleTheme}>
 						{isDark ? <IoMdSunny size={29} /> : <IoMdMoon size={29} />}

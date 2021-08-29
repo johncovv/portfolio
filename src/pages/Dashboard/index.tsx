@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
 
-import { useLocation, useHistory } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 
-import GithubButton from './components/GithubButton';
 import EmailButton from './components/EmailButton';
-import SocialMedias from '../../core/SocialMedias';
-import Skills from './components/Skills';
+import GithubButton from './components/GithubButton';
 import Projects from './components/Projects';
+import Skills from './components/Skills';
+import SocialMedias from '../../core/SocialMedias';
 
-import { Content, LogoTitle, Title, About, OthersItem } from './styles';
+import { About, Content, LogoTitle, OthersItem, Title } from './styles';
 
 const Dashboard: React.FunctionComponent = () => {
 	const location = useLocation();

@@ -3,20 +3,20 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 
 import { BiLink } from 'react-icons/bi';
-import { IoLogoGithub } from 'react-icons/io';
 import { IoDocumentText } from 'react-icons/io5';
+import { IoLogoGithub } from 'react-icons/io';
 
 import ProjectsData from '../../../assets/objects/projects';
 
 import {
-	Content,
-	Project,
-	Title,
-	Icon,
-	Description,
 	ButtonContainer,
 	ButtonLink,
 	ButtonProject,
+	Content,
+	Description,
+	Icon,
+	Project,
+	Title,
 } from '../styles/projects';
 
 const Projects: React.FunctionComponent = () => {

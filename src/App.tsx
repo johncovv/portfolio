@@ -8,13 +8,13 @@ import { ThemeProvider } from 'styled-components';
 import Routes from './routes';
 
 // components
-import Header from './core/Header';
 import BackToTop from './core/BackToTop';
 import Footer from './core/Footer';
+import Header from './core/Header';
 
 // themes
-import lightTheme from './styles/themes/light';
 import darkTheme from './styles/themes/dark';
+import lightTheme from './styles/themes/light';
 
 // styles
 import GlobalStyles, { AppContainer } from './styles/global.styles';

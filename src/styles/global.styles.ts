@@ -58,12 +58,13 @@ export default createGlobalStyle`
 `;
 
 export const AppContainer = styled.div`
-	/* center container */
 	padding: calc(50px + 75px) 20px 0;
 	@media (min-width: 1024px) {
 		padding: calc(50px + 75px) 20px 0;
 	}
 
-	max-width: 1000px;
+	/* center container */
 	margin: 0 auto;
+	max-width: 1000px;
+	min-height: calc(100vh - (75px + (25px + 100px + 50px)));
 `;
