@@ -30,45 +30,37 @@ const Projects: React.FunctionComponent = () => {
 
 	return (
 		<Content>
-			{ProjectsData.map(
-				({ name, icon, url, detailsUrl, github, description }) => (
-					<Project key={name}>
-						<Title>
-							{icon && !!icon.source && (
-								<Icon
-									src={icon.source}
-									alt={icon.alt || 'johncovv project icon'}
-								/>
-							)}{' '}
-							{name}
-						</Title>
-						<Description linkTarget="_blank">{description}</Description>
+			{ProjectsData.map(({ name, icon, url, detailsUrl, github, description }) => (
+				<Project key={name}>
+					<Title>
+						{icon && !!icon.source && <Icon src={icon.source} alt={icon.alt || 'johncovv project icon'} />} {name}
+					</Title>
+					<Description linkTarget="_blank">{description}</Description>
 
-						<ButtonContainer>
-							{!detailsUrl && url && (
-								<ButtonLink onClick={() => window.open(url, '_blank')}>
-									<BiLink size={22} color="#282929" />
-									Visualizar
-								</ButtonLink>
-							)}
+					<ButtonContainer>
+						{!detailsUrl && url && (
+							<ButtonLink onClick={() => window.open(url, '_blank')}>
+								<BiLink size={22} color="#282929" />
+								Visualizar
+							</ButtonLink>
+						)}
 
-							{detailsUrl && (
-								<ButtonLink onClick={() => navigateTo(detailsUrl)}>
-									<IoDocumentText size={22} color="#282929" />
-									Detalhes
-								</ButtonLink>
-							)}
+						{detailsUrl && (
+							<ButtonLink onClick={() => navigateTo(detailsUrl)}>
+								<IoDocumentText size={22} color="#282929" />
+								Detalhes
+							</ButtonLink>
+						)}
 
-							{github && github.length > 0 && (
-								<ButtonProject onClick={() => window.open(github, '_blank')}>
-									<IoLogoGithub size={22} color="#282929" />
-									Abrir Projeto
-								</ButtonProject>
-							)}
-						</ButtonContainer>
-					</Project>
-				),
-			)}
+						{github && github.length > 0 && (
+							<ButtonProject onClick={() => window.open(github, '_blank')}>
+								<IoLogoGithub size={22} color="#282929" />
+								Abrir Projeto
+							</ButtonProject>
+						)}
+					</ButtonContainer>
+				</Project>
+			))}
 		</Content>
 	);
 };

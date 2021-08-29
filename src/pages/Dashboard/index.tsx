@@ -21,9 +21,7 @@ const Dashboard: React.FunctionComponent = () => {
 
 		if (!scrollTo) return;
 
-		const elementToScroll = document.querySelector(`#${scrollTo}`) as
-			| HTMLDivElement
-			| undefined;
+		const elementToScroll = document.querySelector(`#${scrollTo}`) as HTMLDivElement | undefined;
 
 		if (elementToScroll) {
 			elementToScroll.scrollIntoView({ behavior: 'smooth' });
@@ -46,16 +44,14 @@ const Dashboard: React.FunctionComponent = () => {
 
 			{/* about */}
 			<About>
-				Trabalho na área de Desenvolvimento Web desde 2018, neste tempo passei
-				por várias tecnologias, como <span>PHP</span>, <span>Vue</span> até que
-				me encontrei na stack <span className="primary">Full Javascript</span>,
-				com desenvolvimento utilizando tecnologias <span>Javascript</span> como{' '}
-				<span>NodeJs</span>, <span>React</span> e <span>React Native</span>.
+				Trabalho na área de Desenvolvimento Web desde 2018, neste tempo passei por várias tecnologias, como{' '}
+				<span>PHP</span>, <span>Vue</span> até que me encontrei na stack{' '}
+				<span className="primary">Full Javascript</span>, com desenvolvimento utilizando tecnologias{' '}
+				<span>Javascript</span> como <span>NodeJs</span>, <span>React</span> e <span>React Native</span>.
 			</About>
 
 			<OthersItem linkTarget="_blank">
-				📌 Atualmente prestando serviços a [Bnp Soluções em
-				TI](https://www.bnpsolucoes.com.br/).
+				📌 Atualmente prestando serviços a [Bnp Soluções em TI](https://www.bnpsolucoes.com.br/).
 			</OthersItem>
 
 			<GithubButton>Visite meu Github</GithubButton>

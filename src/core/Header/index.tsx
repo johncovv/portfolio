@@ -3,24 +3,14 @@ import React from 'react';
 import { IoMdMoon, IoMdSunny } from 'react-icons/io';
 import { useHistory } from 'react-router-dom';
 
-import {
-	Container,
-	Content,
-	Item,
-	Logo,
-	NavItems,
-	TogglerButton,
-} from './styles';
+import { Container, Content, Item, Logo, NavItems, TogglerButton } from './styles';
 
 interface HeaderProps {
 	isDark: boolean;
 	toggleTheme(): void;
 }
 
-const Header: React.FunctionComponent<HeaderProps> = ({
-	isDark,
-	toggleTheme,
-}: HeaderProps) => {
+const Header: React.FunctionComponent<HeaderProps> = ({ isDark, toggleTheme }: HeaderProps) => {
 	const { push } = useHistory();
 
 	const handleLogoClick = (): void => {
@@ -43,12 +33,8 @@ const Header: React.FunctionComponent<HeaderProps> = ({
 				<Logo onClick={handleLogoClick} />
 
 				<NavItems>
-					<Item onClick={() => navigateTo({ pathname: '/', hash: 'skills' })}>
-						Skills
-					</Item>
-					<Item onClick={() => navigateTo({ pathname: '/', hash: 'projects' })}>
-						Projetos
-					</Item>
+					<Item onClick={() => navigateTo({ pathname: '/', hash: 'skills' })}>Skills</Item>
+					<Item onClick={() => navigateTo({ pathname: '/', hash: 'projects' })}>Projetos</Item>
 
 					<TogglerButton onClick={toggleTheme}>
 						{isDark ? <IoMdSunny size={29} /> : <IoMdMoon size={29} />}

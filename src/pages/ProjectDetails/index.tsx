@@ -43,8 +43,7 @@ const ProjectDetails: React.FunctionComponent = () => {
 	useEffect(() => {
 		const exist = ProjectsObj.find(
 			(pjt) =>
-				pjt.name.toLowerCase() === projectName.toLowerCase() ||
-				pjt.alias?.toLowerCase() === projectName.toLowerCase(),
+				pjt.name.toLowerCase() === projectName.toLowerCase() || pjt.alias?.toLowerCase() === projectName.toLowerCase(),
 		);
 
 		if (!exist) {
@@ -91,23 +90,15 @@ const ProjectDetails: React.FunctionComponent = () => {
 
 				{project.uiDesign && (
 					<Button onClick={() => window.open(project.uiDesign?.url, '_blank')}>
-						{project.uiDesign?.type === 'Figma' && (
-							<CgFigma size={22} color="#282929" />
-						)}
-						{project.uiDesign?.type === 'Adobe XD' && (
-							<SiAdobexd size={22} color="#282929" />
-						)}
-						{project.uiDesign?.type === 'Photoshop' && (
-							<DiPhotoshop size={22} color="#282929" />
-						)}
+						{project.uiDesign?.type === 'Figma' && <CgFigma size={22} color="#282929" />}
+						{project.uiDesign?.type === 'Adobe XD' && <SiAdobexd size={22} color="#282929" />}
+						{project.uiDesign?.type === 'Photoshop' && <DiPhotoshop size={22} color="#282929" />}
 						Abrir {project.uiDesign.type}
 					</Button>
 				)}
 			</ButtonContainer>
 
-			<About linkTarget="_blank">
-				{project.description.replace(/\n/g, '<br/>').replace(/\s/g, ' ')}
-			</About>
+			<About linkTarget="_blank">{project.description.replace(/\n/g, '<br/>').replace(/\s/g, ' ')}</About>
 
 			{project.technologies && project.technologies.length > 0 && (
 				<TechnologiesGroup>

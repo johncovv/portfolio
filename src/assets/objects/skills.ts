@@ -1,11 +1,4 @@
-import {
-	FaAngular,
-	FaHtml5,
-	FaLess,
-	FaNodeJs,
-	FaReact,
-	FaSass,
-} from 'react-icons/fa';
+import { FaAngular, FaHtml5, FaLess, FaNodeJs, FaReact, FaSass } from 'react-icons/fa';
 import { SiGit, SiJavascript, SiTypescript } from 'react-icons/si';
 import { IoLogoGithub } from 'react-icons/io';
 
@@ -23,16 +16,14 @@ export default [
 		color: '#61DBFB',
 		url: 'https://github.com/topics/react',
 		Icon: FaReact,
-		description:
-			'React é uma biblioteca JavaScript de código aberto com foco em criação de interfaces SPA.',
+		description: 'React é uma biblioteca JavaScript de código aberto com foco em criação de interfaces SPA.',
 	},
 	{
 		name: 'NodeJs',
 		color: '#8BBF3D',
 		url: 'https://github.com/topics/nodejs',
 		Icon: FaNodeJs,
-		description:
-			'Nodejs é runtime em Javascript que possíbilita execução de código a nível de backend e front-end.',
+		description: 'Nodejs é runtime em Javascript que possíbilita execução de código a nível de backend e front-end.',
 	},
 	{
 		name: 'Git',
@@ -47,8 +38,7 @@ export default [
 		color: '#FFFFFF',
 		url: 'https://github.com/',
 		Icon: IoLogoGithub,
-		description:
-			'Maior plataforma de hospedagem e colaboracão de código utilizando versionamento Git. ',
+		description: 'Maior plataforma de hospedagem e colaboracão de código utilizando versionamento Git. ',
 	},
 	{
 		name: 'Javascript',
@@ -79,15 +69,13 @@ export default [
 		color: '#1d365d',
 		url: 'https://github.com/topics/less',
 		Icon: FaLess,
-		description:
-			'Less (que significa Leaner Style Sheets), como a Sass, é uma extensão de linguagem para CSS.',
+		description: 'Less (que significa Leaner Style Sheets), como a Sass, é uma extensão de linguagem para CSS.',
 	},
 	{
 		name: 'Html5',
 		color: '#DD4B25',
 		url: 'https://github.com/topics/html5',
 		Icon: FaHtml5,
-		description:
-			'HTML é uma linguagem de marcação utilizada na construção de páginas na Web.',
+		description: 'HTML é uma linguagem de marcação utilizada na construção de páginas na Web.',
 	},
 ];

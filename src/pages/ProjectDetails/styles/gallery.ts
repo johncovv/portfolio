@@ -2,10 +2,7 @@ import styled, { css } from 'styled-components';
 
 import { VscChromeClose } from 'react-icons/vsc';
 
-import {
-	IoIosArrowDropleftCircle,
-	IoIosArrowDroprightCircle,
-} from 'react-icons/io';
+import { IoIosArrowDropleftCircle, IoIosArrowDroprightCircle } from 'react-icons/io';
 
 import LoadingGIF from '../../../assets/static/loading.gif';
 
@@ -365,9 +362,7 @@ export const ThumbnailButton = styled.div<ThumbnailButtonAttr>`
 	transition: box-shadow 200ms ease-in-out;
 
 	border-radius: 8px;
-	box-shadow: inset 0px 0px 0px 3px
-		${({ isActivated, theme }) =>
-			isActivated ? theme.colors.orange : 'transparent'};
+	box-shadow: inset 0px 0px 0px 3px ${({ isActivated, theme }) => (isActivated ? theme.colors.orange : 'transparent')};
 
 	&:not(:last-child) {
 		margin-right: 0.5rem;

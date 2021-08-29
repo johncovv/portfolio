@@ -43,10 +43,7 @@ const App: React.FunctionComponent = () => {
 	return (
 		<ThemeProvider theme={currentTheme === 'dark' ? darkTheme : lightTheme}>
 			<BrowserRouter>
-				<Header
-					isDark={currentTheme === 'dark'}
-					toggleTheme={() => toggleTheme()}
-				/>
+				<Header isDark={currentTheme === 'dark'} toggleTheme={() => toggleTheme()} />
 
 				<AppContainer>
 					<Routes />

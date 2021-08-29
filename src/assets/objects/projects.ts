@@ -103,8 +103,7 @@ export default [
 			type: 'error',
 			message: 'Este projeto saiu do ar em Dezembro de 2020!',
 		},
-		url:
-			'https://www.teatroportoseguro.com.br/programacao/realizados/exreality.html',
+		url: 'https://www.teatroportoseguro.com.br/programacao/realizados/exreality.html',
 		detailsUrl: '/project/ExReality',
 		github: '',
 		description:
@@ -213,8 +212,7 @@ export default [
 		detailsUrl: '/project/Devian',
 		uiDesign: {
 			type: 'Figma',
-			url:
-				'https://www.figma.com/file/tOYHJHpGJ9s4vBL6sqbRnG/Devian-Frontend?node-id=1%3A21',
+			url: 'https://www.figma.com/file/tOYHJHpGJ9s4vBL6sqbRnG/Devian-Frontend?node-id=1%3A21',
 		},
 		github: 'https://github.com/johncovv/devian/',
 		description:

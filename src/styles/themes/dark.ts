@@ -14,7 +14,6 @@ export default {
 		secondary: '#aaaaaa',
 	},
 	shadow: {
-		default:
-			'5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(0, 0, 0, 0.2)',
+		default: '5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(0, 0, 0, 0.2)',
 	},
 };
