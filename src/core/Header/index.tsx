@@ -3,7 +3,7 @@ import React from 'react';
 import { IoMdMoon, IoMdSunny } from 'react-icons/io';
 import { useHistory } from 'react-router-dom';
 
-import { Container, Content, Item, Logo, NavItems, TogglerButton } from './styles';
+import { Container, Content, Item, Logo, LogoContainer, NavItems, TogglerButton } from './styles';
 
 interface HeaderProps {
 	isDark: boolean;
@@ -30,7 +30,9 @@ const Header: React.FunctionComponent<HeaderProps> = ({ isDark, toggleTheme }: H
 	return (
 		<Content>
 			<Container>
-				<Logo onClick={handleLogoClick} />
+				<LogoContainer>
+					<Logo onClick={handleLogoClick} />
+				</LogoContainer>
 
 				<NavItems>
 					<Item onClick={() => navigateTo({ pathname: '/', hash: 'skills' })}>Skills</Item>

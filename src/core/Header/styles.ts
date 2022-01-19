@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { shade } from 'polished';
 
-import { ReactComponent as LogoImg } from '../../assets/static/logo.svg';
+import { ReactComponent as LogoSvg } from '../../assets/static/extended-logo.svg';
 
 export const Content = styled.header`
 	position: sticky;
@@ -28,11 +28,26 @@ export const Container = styled.div`
 	justify-content: space-between;
 `;
 
-export const Logo = styled(LogoImg).attrs({ width: 49, height: 35 })`
-	fill: ${({ theme }) => theme.colors.orange};
+export const LogoContainer = styled.div`
+	display: block;
+	margin-left: -6px;
+`;
 
+export const Logo = styled(LogoSvg).attrs({ width: 49, height: 35 })`
 	transition: fill 200ms, transform 200ms;
 	cursor: pointer;
+
+	display: block;
+	width: 10rem;
+	height: 45px;
+
+	& .extended-logo-default {
+		fill: ${({ theme }) => theme.text.primary};
+	}
+
+	& .extended-logo-primary {
+		fill: ${({ theme }) => theme.colors.orange};
+	}
 
 	&:hover {
 		fill: ${({ theme }) => shade(0.2, theme.colors.orange)};
