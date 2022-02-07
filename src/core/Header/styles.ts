@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { shade } from 'polished';
 
 import { ReactComponent as LogoSvg } from '../../assets/static/extended-logo.svg';
+import { ReactComponent as MobileLogoSvg } from '../../assets/static/small-logo.svg';
 
 export const Content = styled.header`
 	position: sticky;
@@ -33,11 +34,10 @@ export const LogoContainer = styled.div`
 	margin-left: -6px;
 `;
 
-export const Logo = styled(LogoSvg).attrs({ width: 49, height: 35 })`
+export const Logo = styled(LogoSvg)`
 	transition: fill 200ms, transform 200ms;
 	cursor: pointer;
 
-	display: block;
 	width: 10rem;
 	height: 45px;
 
@@ -47,6 +47,50 @@ export const Logo = styled(LogoSvg).attrs({ width: 49, height: 35 })`
 
 	& .extended-logo-primary {
 		fill: ${({ theme }) => theme.colors.orange};
+	}
+
+	/* mobile */
+	@media screen and (max-width: 409px) {
+		display: none;
+	}
+
+	/* tablet & desktop  */
+	@media screen and (min-width: 410px) {
+		display: block;
+
+		@media screen and (max-width: 768px) {
+			width: 8rem;
+		}
+	}
+
+	&:hover {
+		fill: ${({ theme }) => shade(0.2, theme.colors.orange)};
+		transform: scale(1.2);
+	}
+`;
+
+export const MobileLogo = styled(MobileLogoSvg)`
+	transition: fill 200ms, transform 200ms;
+	cursor: pointer;
+	height: 45px;
+
+	.logo-foreground-letter-J-top,
+	.logo-foreground-letter-J-bottom {
+		fill: ${({ theme }) => theme.colors.orange};
+	}
+
+	.logo-foreground-letter-C {
+		fill: ${({ theme }) => theme.text.primary};
+	}
+
+	/* mobile */
+	@media screen and (max-width: 409px) {
+		display: block;
+	}
+
+	/* tablet & desktop  */
+	@media screen and (min-width: 410px) {
+		display: none;
 	}
 
 	&:hover {

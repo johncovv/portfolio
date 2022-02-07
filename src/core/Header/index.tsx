@@ -3,7 +3,7 @@ import React from 'react';
 import { IoMdMoon, IoMdSunny } from 'react-icons/io';
 import { useHistory } from 'react-router-dom';
 
-import { Container, Content, Item, Logo, LogoContainer, NavItems, TogglerButton } from './styles';
+import { Container, Content, Item, Logo, LogoContainer, MobileLogo, NavItems, TogglerButton } from './styles';
 
 interface HeaderProps {
 	isDark: boolean;
@@ -32,6 +32,7 @@ const Header: React.FunctionComponent<HeaderProps> = ({ isDark, toggleTheme }: H
 			<Container>
 				<LogoContainer>
 					<Logo onClick={handleLogoClick} />
+					<MobileLogo onClick={handleLogoClick} />
 				</LogoContainer>
 
 				<NavItems>
