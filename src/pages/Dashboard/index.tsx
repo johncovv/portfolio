@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 
 import { useHistory, useLocation } from 'react-router-dom';
+import { IoLocationSharp } from 'react-icons/io5';
 
 import EmailButton from './components/EmailButton';
 import GithubButton from './components/GithubButton';
@@ -39,7 +40,9 @@ const Dashboard: React.FunctionComponent = () => {
 				<p className="primary">
 					Jonathas Oliveira<span>(johncovv)</span>
 				</p>
-				<p>sou Desenvolvedor web, profissional em front-end. Guariba-SP.</p>
+				<p>
+					sou Desenvolvedor Web Full Stack, de <IoLocationSharp /> Guariba-SP.
+				</p>
 			</LogoTitle>
 
 			{/* about */}
