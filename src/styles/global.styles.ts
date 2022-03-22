@@ -36,6 +36,16 @@ export default createGlobalStyle`
 			border-top-left-radius: 0.5rem;
 			border-bottom-left-radius: 0.5rem;
 		}
+
+		#root {
+			padding-top: 75px;
+
+			/* mobile */
+			@media screen and (max-width: 409px) {
+				padding-top: 0px;
+				padding-bottom: 75px;
+			}
+		}
 	}
 
 	body, button, a {
@@ -59,8 +69,10 @@ export default createGlobalStyle`
 
 export const AppContainer = styled.div`
 	padding: calc(50px + 75px) 20px 0;
-	@media (min-width: 1024px) {
-		padding: calc(50px + 75px) 20px 0;
+
+	/* mobile */
+	@media screen and (max-width: 409px) {
+		padding: calc(50px) 20px 0 !important;
 	}
 
 	/* center container */

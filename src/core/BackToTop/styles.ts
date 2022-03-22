@@ -16,7 +16,12 @@ export const Content = styled.div`
 	transition: background-color 200ms;
 	cursor: pointer;
 
-	&:hover {
+	&:active {
 		background-color: ${({ theme }) => shade(0.2, theme.background.secondary)};
+	}
+
+	/* mobile */
+	@media screen and (max-width: 409px) {
+		bottom: calc(-3px + 75px);
 	}
 `;

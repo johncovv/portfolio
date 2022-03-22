@@ -66,14 +66,14 @@ const Dashboard: React.FunctionComponent = () => {
 			<SocialMedias style={{ marginTop: 15 }} />
 
 			{/* skills */}
-			<Title style={{ paddingTop: 130 }} id="skills">
+			<Title paddingTop={130} id="skills">
 				Skills
 			</Title>
 
 			<Skills />
 
 			{/* projects */}
-			<Title style={{ paddingTop: 130 }} id="projects">
+			<Title paddingTop={130} id="projects">
 				Projetos
 			</Title>
 

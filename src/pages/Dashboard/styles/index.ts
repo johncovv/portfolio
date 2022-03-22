@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import ReactMarkdown from 'react-markdown';
 
@@ -53,11 +53,23 @@ export const About = styled.p`
 	}
 `;
 
-export const Title = styled.p`
+type ITitleProps = {
+	paddingTop?: number;
+	marginTop?: number;
+};
+
+export const Title = styled.p<ITitleProps>`
 	font-family: 'JetBrains Mono', monospace;
 	font-weight: 700;
-	margin-top: 25px;
 	font-size: 22px;
+
+	padding-top: ${(props) => `${props.paddingTop}px` ?? 0};
+	margin-top: ${(props) => `${props.marginTop}px` ?? '25px'};
+
+	/* mobile */
+	@media screen and (max-width: 409px) {
+		padding-top: 4rem !important;
+	}
 `;
 
 export const OthersItem = styled(ReactMarkdown)`

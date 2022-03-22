@@ -6,7 +6,7 @@ import { ReactComponent as LogoSvg } from '../../assets/static/extended-logo.svg
 import { ReactComponent as MobileLogoSvg } from '../../assets/static/small-logo.svg';
 
 export const Content = styled.header`
-	position: sticky;
+	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -15,6 +15,12 @@ export const Content = styled.header`
 	background: ${({ theme }) => theme.background.secondary};
 	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 	height: 75px;
+
+	/* mobile */
+	@media screen and (max-width: 409px) {
+		top: auto;
+		bottom: 0;
+	}
 `;
 
 export const Container = styled.div`
