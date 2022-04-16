@@ -20,6 +20,15 @@
 	},
 	"plugins": ["react", "@typescript-eslint", "react-hooks", "prettier"],
 	"rules": {
+		"no-unused-vars": "off",
+		"@typescript-eslint/no-unused-vars": [
+			"warn",
+			{
+				"argsIgnorePattern": "^_",
+				"varsIgnorePattern": "^_",
+				"caughtErrorsIgnorePattern": "^_"
+			}
+		],
 		"no-use-before-define": "off",
 		// permite o uso do index na key do elemento ao renderizar dados de array
 		"react/no-array-index-key": "off",
@@ -36,10 +45,7 @@
 		"prettier/prettier": "error",
 		"react-hooks/rules-of-hooks": "error",
 		"react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
-		"@typescript-eslint/explicit-function-return-type": [
-			"error",
-			{ "allowExpressions": true }
-		],
+		"@typescript-eslint/explicit-function-return-type": ["error", { "allowExpressions": true }],
 		"import/prefer-default-export": "off",
 		"import/extensions": [
 			"error",
